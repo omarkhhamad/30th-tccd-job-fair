@@ -1,0 +1,3152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCCD 30th Job Fair 2026</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #09111f;
+      --paper: #f4f1ea;
+      --gold: #c8933a;
+      --gold-light: #e8b86d;
+      --gold-pale: #f7e9cf;
+      --blue-deep: #0c1c3a;
+      --blue-mid: #1a3a72;
+      --blue-light: #d4e3f7;
+      --white: #ffffff;
+      --gray-soft: #e8e5de;
+      --gray-mid: #9e9890;
+      --gray-dark: #3d3930;
+      --radius: 6px;
+      --shadow: 0 2px 16px rgba(9, 17, 31, .07);
+      --shadow-md: 0 4px 24px rgba(9, 17, 31, .11);
+      --shadow-lg: 0 12px 48px rgba(9, 17, 31, .16);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NOISE */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: .35;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+    }
+
+    /* Ensure all containers respect the viewport width */
+    .container,
+    section,
+    .hero-content,
+    footer {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Syne', sans-serif;
+      line-height: 1.1;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(12, 28, 58, .97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200, 147, 58, .25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 60px;
+      transition: box-shadow .3s;
+    }
+
+    nav.scrolled {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .3);
+    }
+
+    .nav-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: .82rem;
+      color: var(--gold-light);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+
+    .nav-brand-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: .1rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: .4rem .8rem;
+      font-size: .75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, .6);
+      text-decoration: none;
+      border-radius: 4px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      transition: color .2s, background .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+      background: rgba(200, 147, 58, .12);
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--ink);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .45rem 1.1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .4;
+        transform: scale(.65)
+      }
+    }
+
+    /* ── HERO ── */
+    #hero {
+      background: var(--blue-deep);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200, 147, 58, .04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 147, 58, .04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black, transparent);
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200, 147, 58, .12) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    #hero::after {
+      content: '30';
+      position: absolute;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(200px, 38vw, 480px);
+      color: rgba(200, 147, 58, .045);
+      line-height: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      background: rgba(200, 147, 58, .12);
+      border: 1px solid rgba(200, 147, 58, .35);
+      color: var(--gold-light);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .4rem 1.1rem;
+      border-radius: 99px;
+      margin-bottom: 2rem;
+      animation: fadeDown .8s ease both;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    #hero h1 {
+      font-size: clamp(2.8rem, 7.5vw, 6.5rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -.025em;
+      animation: fadeDown .9s .1s ease both;
+      max-width: 960px;
+    }
+
+    #hero h1 em {
+      font-style: normal;
+      color: var(--gold-light);
+      position: relative;
+    }
+
+    #hero h1 em::after {
+      content: '';
+      position: absolute;
+      bottom: .04em;
+      left: 0;
+      right: 0;
+      height: .07em;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, .55);
+      font-weight: 300;
+      animation: fadeDown 1s .2s ease both;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      animation: fadeDown 1s .25s ease both;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold-light);
+    }
+
+    .hero-stat-label {
+      font-size: .72rem;
+      color: rgba(255, 255, 255, .45);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: .15rem;
+    }
+
+    .hero-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      animation: fadeDown 1s .3s ease both;
+    }
+
+    .hero-info-item {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      color: rgba(255, 255, 255, .75);
+      font-size: .85rem;
+      padding: .5rem 1rem;
+      border-radius: 99px;
+    }
+
+    .hero-info-item .icon {
+      font-size: 1rem;
+    }
+
+    .hero-cta {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeDown 1s .4s ease both;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--ink);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .9rem 2.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(200, 147, 58, .3);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(200, 147, 58, .4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: rgba(255, 255, 255, .75);
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .9rem 2.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      border: 1.5px solid rgba(255, 255, 255, .2);
+      transition: border-color .2s, color .2s, transform .15s, background .2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold-light);
+      color: var(--gold-light);
+      transform: translateY(-2px);
+      background: rgba(200, 147, 58, .07);
+    }
+
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      color: rgba(255, 255, 255, .3);
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      animation: fadeDown 1.5s .8s ease both;
+    }
+
+    .scroll-arrow {
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid rgba(255, 255, 255, .2);
+      border-bottom: 2px solid rgba(255, 255, 255, .2);
+      transform: rotate(45deg);
+      animation: scrollBounce 2s infinite;
+    }
+
+    @keyframes scrollBounce {
+
+      0%,
+      100% {
+        transform: rotate(45deg) translateY(0)
+      }
+
+      50% {
+        transform: rotate(45deg) translateY(5px)
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-22px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ── SECTION LAYOUT ── */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-num {
+      font-family: 'Syne', sans-serif;
+      font-size: .68rem;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      border: 1.5px solid var(--gold);
+      padding: .25rem .65rem;
+      border-radius: 4px;
+      margin-top: .3rem;
+      white-space: nowrap;
+    }
+
+    .section-title-group {
+      flex: 1;
+    }
+
+    .section-title {
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+    }
+
+    .section-title-line {
+      width: 100%;
+      height: 2px;
+      margin-top: 1rem;
+      background: linear-gradient(to right, var(--gold), transparent);
+    }
+
+    .section-subtitle {
+      font-size: .9rem;
+      color: var(--gray-mid);
+      margin-top: .5rem;
+      font-weight: 400;
+    }
+
+    /* ── AGENDA ── */
+    #agenda {
+      background: var(--blue-deep);
+      color: var(--white);
+    }
+
+    #agenda .section-num {
+      color: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    #agenda .section-title {
+      color: var(--white);
+    }
+
+    #agenda .section-title-line {
+      background: linear-gradient(to right, var(--gold-light), transparent);
+    }
+
+    #agenda .section-subtitle {
+      color: rgba(255, 255, 255, .45);
+    }
+
+    .agenda-timeline {
+      position: relative;
+    }
+
+    .agenda-timeline::before {
+      content: '';
+      position: absolute;
+      left: 118px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, rgba(200, 147, 58, .3) 10%, rgba(200, 147, 58, .3) 90%, transparent);
+    }
+
+    .agenda-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 0 2rem;
+      align-items: start;
+      padding: 1.1rem 0;
+      position: relative;
+    }
+
+    .agenda-item+.agenda-item {
+      border-top: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    .agenda-dot {
+      position: absolute;
+      left: 113px;
+      top: 1.4rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--blue-deep);
+      border: 2px solid rgba(200, 147, 58, .5);
+      z-index: 1;
+    }
+
+    .agenda-item.keynote .agenda-dot {
+      background: #ffd700;
+      border-color: #ffd700;
+      box-shadow: 0 0 12px rgba(255, 215, 0, .5);
+    }
+
+    .agenda-item.opening .agenda-dot {
+      border-color: #a8d8ea;
+    }
+
+    .agenda-item.session .agenda-dot {
+      border-color: #a8e8c0;
+    }
+
+    .agenda-item.closing .agenda-dot {
+      border-color: var(--gray-mid);
+    }
+
+    .agenda-time {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .82rem;
+      color: var(--gold-light);
+      text-align: right;
+      padding-top: .1rem;
+      padding-right: 1rem;
+    }
+
+    .agenda-body {
+      padding-left: 1rem;
+    }
+
+    .agenda-top {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      flex-wrap: wrap;
+      margin-bottom: .25rem;
+    }
+
+    .agenda-title {
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--white);
+    }
+
+    .agenda-item.keynote .agenda-title {
+      color: #ffd700;
+    }
+
+    .agenda-tag {
+      font-size: .65rem;
+      font-weight: 700;
+      font-family: 'Syne', sans-serif;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      padding: .2rem .55rem;
+      border-radius: 99px;
+      white-space: nowrap;
+      background: rgba(200, 147, 58, .15);
+      color: var(--gold-light);
+      border: 1px solid rgba(200, 147, 58, .25);
+    }
+
+    .agenda-tag.tag-keynote {
+      background: rgba(255, 215, 0, .15);
+      color: #ffd700;
+      border-color: rgba(255, 215, 0, .3);
+    }
+
+    .agenda-tag.tag-opening {
+      background: rgba(168, 216, 234, .12);
+      color: #a8d8ea;
+      border-color: rgba(168, 216, 234, .25);
+    }
+
+    .agenda-tag.tag-networking {
+      background: rgba(168, 232, 192, .12);
+      color: #a8e8c0;
+      border-color: rgba(168, 232, 192, .25);
+    }
+
+    .agenda-tag.tag-closing {
+      background: rgba(158, 152, 144, .12);
+      color: rgba(255, 255, 255, .4);
+      border-color: rgba(158, 152, 144, .25);
+    }
+
+    .agenda-speaker {
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .45);
+      margin-top: .15rem;
+    }
+
+    /* ── COMPANIES ── */
+    #companies {
+      background: var(--paper);
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      padding: 1rem 1.25rem;
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--gray-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .search-wrap {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      background: var(--paper);
+      border: 1.5px solid var(--gray-soft);
+      border-radius: 6px;
+      padding: .5rem .9rem;
+      transition: border-color .2s;
+    }
+
+    .search-wrap:focus-within {
+      border-color: var(--blue-mid);
+    }
+
+    .search-wrap svg {
+      opacity: .4;
+      flex-shrink: 0;
+    }
+
+    .search-input {
+      border: none;
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .88rem;
+      color: var(--ink);
+      width: 100%;
+      outline: none;
+    }
+
+    .search-input::placeholder {
+      color: var(--gray-mid);
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+
+    .filter-btn {
+      font-family: 'Syne', sans-serif;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: .38rem .9rem;
+      border-radius: 99px;
+      border: 1.5px solid var(--gray-soft);
+      background: transparent;
+      color: var(--gray-dark);
+      cursor: pointer;
+      transition: all .2s;
+      white-space: nowrap;
+    }
+
+    .filter-btn.active {
+      background: var(--blue-deep);
+      border-color: var(--blue-deep);
+      color: var(--white);
+    }
+
+    .filter-btn:hover:not(.active) {
+      border-color: var(--blue-mid);
+      color: var(--blue-mid);
+      background: var(--blue-light);
+    }
+
+    .results-count {
+      font-size: .78rem;
+      color: var(--gray-mid);
+      margin-left: auto;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    .companies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .company-card {
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--gray-soft);
+      padding: 1.5rem 1.6rem 1.4rem;
+      transition: transform .22s, box-shadow .22s;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .company-card-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--blue-mid);
+    }
+
+    .tier-diamond .company-card-accent {
+      background: linear-gradient(90deg, #b9f2ff, #6ec6ff, #b9f2ff);
+    }
+
+    .tier-title .company-card-accent {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+    }
+
+    .tier-gold .company-card-accent {
+      background: linear-gradient(90deg, var(--gold), #e8b86d);
+    }
+
+    .tier-silver .company-card-accent {
+      background: linear-gradient(90deg, #bbb, #e0e0e0);
+    }
+
+    .tier-edu .company-card-accent {
+      background: linear-gradient(90deg, #6db8e8, #a8e8c0);
+    }
+
+    .tier-exhibitor .company-card-accent {
+      background: linear-gradient(90deg, var(--blue-mid), #6db8e8);
+    }
+
+    .company-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: .5rem;
+      margin-bottom: .85rem;
+    }
+
+    .company-tier {
+      display: inline-block;
+      font-size: .64rem;
+      font-weight: 800;
+      font-family: 'Syne', sans-serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .22rem .55rem;
+      border-radius: 4px;
+      background: var(--gold-pale);
+      color: var(--gold);
+    }
+
+    .tier-diamond .company-tier {
+      background: #e8f8ff;
+      color: #3a9ac8;
+    }
+
+    .tier-silver .company-tier {
+      background: #f5f5f5;
+      color: #666;
+    }
+
+    .tier-edu .company-tier {
+      background: #e8f5e9;
+      color: #388e3c;
+    }
+
+    .tier-exhibitor .company-tier {
+      background: var(--blue-light);
+      color: var(--blue-mid);
+    }
+
+    .company-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .3rem;
+      line-height: 1.2;
+    }
+
+    .company-industry {
+      font-size: .78rem;
+      color: var(--gray-mid);
+      font-weight: 500;
+      margin-bottom: .8rem;
+    }
+
+    .company-desc {
+      font-size: .82rem;
+      color: var(--gray-dark);
+      line-height: 1.55;
+      margin-bottom: .9rem;
+    }
+
+    .company-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+    }
+
+    .major-tag {
+      font-size: .67rem;
+      background: var(--blue-light);
+      color: var(--blue-mid);
+      padding: .2rem .5rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .no-results {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--gray-mid);
+      font-size: .95rem;
+    }
+
+    .no-results-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: .4;
+    }
+
+    /* ── SPEAKERS ── */
+    #speakers {
+      background: #f0ede6;
+    }
+
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .speaker-card {
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, .07);
+      padding: 1.75rem;
+      transition: transform .2s, box-shadow .2s;
+      position: relative;
+    }
+
+    .speaker-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .speaker-time {
+      font-family: 'Syne', sans-serif;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .65rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .speaker-time::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 1px;
+    }
+
+    .speaker-keynote-badge {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: linear-gradient(135deg, #ffd700, #f0a500);
+      color: #3a2200;
+      font-family: 'Syne', sans-serif;
+      font-size: .6rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .2rem .5rem;
+      border-radius: 4px;
+    }
+
+    .speaker-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .25rem;
+    }
+
+    .speaker-role {
+      font-size: .82rem;
+      color: var(--blue-mid);
+      font-weight: 600;
+      margin-bottom: .12rem;
+    }
+
+    .speaker-org {
+      font-size: .78rem;
+      color: var(--gray-mid);
+      margin-bottom: .9rem;
+      line-height: 1.4;
+    }
+
+    .speaker-panel {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .55rem;
+    }
+
+    .speaker-topics {
+      list-style: none;
+      padding: 0;
+    }
+
+    .speaker-topics li {
+      font-size: .78rem;
+      color: var(--gray-dark);
+      padding: .22rem 0 .22rem 1.1rem;
+      position: relative;
+      border-bottom: 1px solid rgba(0, 0, 0, .04);
+    }
+
+    .speaker-topics li:last-child {
+      border-bottom: none;
+    }
+
+    .speaker-topics li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: .72rem;
+    }
+
+    .speaker-audience {
+      margin-top: .9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--blue-mid);
+      background: var(--blue-light);
+      padding: .25rem .65rem;
+      border-radius: 4px;
+    }
+
+    /* ── MENTORS ── */
+    #mentors {
+      background: var(--paper);
+    }
+
+    .mentors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1rem;
+    }
+
+    .mentor-card {
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--gray-soft);
+      border-left: 4px solid var(--blue-mid);
+      padding: 1.3rem 1.5rem;
+      transition: border-left-color .2s, box-shadow .2s, transform .2s;
+    }
+
+    .mentor-card:hover {
+      border-left-color: var(--gold);
+      box-shadow: var(--shadow-md);
+      transform: translateX(3px);
+    }
+
+    .mentor-org-chip {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 800;
+      font-family: 'Syne', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: var(--blue-light);
+      color: var(--blue-mid);
+      padding: .2rem .55rem;
+      border-radius: 4px;
+      margin-bottom: .65rem;
+    }
+
+    .mentor-name {
+      font-family: 'Syne', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .18rem;
+    }
+
+    .mentor-role {
+      font-size: .78rem;
+      color: var(--blue-mid);
+      font-weight: 500;
+      margin-bottom: .6rem;
+    }
+
+    .mentor-topic {
+      font-size: .8rem;
+      color: var(--gray-dark);
+      font-style: italic;
+      margin-bottom: .65rem;
+      line-height: 1.5;
+    }
+
+    .mentor-majors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+    }
+
+    .mentor-major-tag {
+      font-size: .65rem;
+      background: var(--gold-pale);
+      color: var(--gold);
+      padding: .18rem .5rem;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    /* ── BY MAJOR ── */
+    #by-major {
+      background: var(--blue-deep);
+      color: var(--white);
+    }
+
+    #by-major .section-num {
+      color: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    #by-major .section-title {
+      color: var(--white);
+    }
+
+    #by-major .section-title-line {
+      background: linear-gradient(to right, var(--gold-light), transparent);
+    }
+
+    #by-major .section-subtitle {
+      color: rgba(255, 255, 255, .45);
+    }
+
+    .major-search-wrap {
+      position: relative;
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+    }
+
+    .major-search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: .4;
+      pointer-events: none;
+    }
+
+    .major-search {
+      width: 100%;
+      padding: .85rem 1rem .85rem 3rem;
+      background: rgba(255, 255, 255, .07);
+      border: 1.5px solid rgba(255, 255, 255, .15);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .92rem;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color .2s, background .2s;
+    }
+
+    .major-search::placeholder {
+      color: rgba(255, 255, 255, .3);
+    }
+
+    .major-search:focus {
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .major-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .major-card {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .09);
+      border-radius: 8px;
+      padding: 1.6rem;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+
+    .major-card:hover {
+      background: rgba(255, 255, 255, .08);
+      border-color: rgba(200, 147, 58, .3);
+      transform: translateY(-2px);
+    }
+
+    .major-card-header {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      margin-bottom: 1rem;
+    }
+
+    .major-card-icon {
+      font-size: 1.2rem;
+    }
+
+    .major-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .major-count {
+      margin-left: auto;
+      font-family: 'Syne', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(200, 147, 58, .15);
+      padding: .2rem .55rem;
+      border-radius: 99px;
+      border: 1px solid rgba(200, 147, 58, .2);
+    }
+
+    .major-companies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+
+    .major-company-tag {
+      font-size: .72rem;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: rgba(255, 255, 255, .75);
+      padding: .28rem .65rem;
+      border-radius: 4px;
+      transition: background .15s, border-color .15s;
+    }
+
+    .major-company-tag:hover {
+      background: rgba(200, 147, 58, .2);
+      border-color: rgba(200, 147, 58, .3);
+      color: var(--white);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060c18;
+      color: rgba(255, 255, 255, .4);
+      padding: 3rem 2rem;
+      text-align: center;
+      font-size: .82rem;
+    }
+
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--gold-light);
+      margin-bottom: .75rem;
+    }
+
+    footer p+p {
+      margin-top: .4rem;
+    }
+
+    footer strong {
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .footer-divider {
+      width: 60px;
+      height: 2px;
+      background: rgba(200, 147, 58, .3);
+      margin: 1.25rem auto;
+      border-radius: 1px;
+    }
+
+    .footer-tagline {
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .35;
+      margin-top: .75rem;
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── BACK TO TOP ── */
+    #btt {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      z-index: 300;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--ink);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(200, 147, 58, .4);
+      transition: opacity .3s, transform .3s, background .2s;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      font-size: 1.1rem;
+    }
+
+    #btt.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    #btt:hover {
+      background: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      section {
+        padding: 4rem 1.25rem;
+      }
+
+      .agenda-timeline::before {
+        left: 88px;
+      }
+
+      .agenda-dot {
+        left: 83px;
+      }
+
+      .agenda-item {
+        grid-template-columns: 80px 1fr;
+      }
+
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .results-count {
+        margin-left: 0;
+      }
+
+      .major-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .agenda-time {
+        font-size: .75rem;
+      }
+
+      .companies-grid,
+      .speakers-grid,
+      .mentors-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BACK TO TOP -->
+  <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-brand">
+      <div class="nav-brand-dot"></div>
+      TCCD · Job Fair 2026
+    </div>
+    <ul class="nav-links">
+      <li><a href="#agenda">Schedule</a></li>
+      <li><a href="#companies">Companies</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#mentors">Mentors</a></li>
+      <li><a href="#by-major">By Major</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#companies" class="nav-cta">Find Opportunities</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>30th Edition · A Move to Improve
+      </div>
+      <h1>TCCD <em>Job Fair</em> 2026</h1>
+      <p class="hero-sub">Faculty of Engineering – Cairo University · Giza Campus</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">50+</div>
+          <div class="hero-stat-label">Companies</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">20+</div>
+          <div class="hero-stat-label">Speakers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">20+</div>
+          <div class="hero-stat-label">Mentors</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">10h</div>
+          <div class="hero-stat-label">Networking</div>
+        </div>
+      </div>
+      <div class="hero-info">
+        <div class="hero-info-item"><span class="icon">📅</span><span>April 22nd, 2026</span></div>
+        <div class="hero-info-item"><span class="icon">⏰</span><span>9 AM – 7 PM</span></div>
+        <div class="hero-info-item"><span class="icon">🏛️</span><span>Faculty of Engineering, Cairo University</span>
+        </div>
+        <div class="hero-info-item"><span class="icon">🎟️</span><span>Free Admission</span></div>
+      </div>
+      <div class="hero-cta">
+        <a href="#agenda" class="btn-gold">View Full Schedule</a>
+        <a href="#by-major" class="btn-outline">Find By My Major</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- AGENDA -->
+  <section id="agenda">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-num">01</div>
+        <div class="section-title-group">
+          <h2 class="section-title">Day Schedule</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">April 22nd, 2026 · 8:30 AM to 7:00 PM · Open Theatre & Exhibition Halls</p>
+        </div>
+      </div>
+
+      <div class="agenda-timeline">
+
+        <div class="agenda-item opening reveal">
+          <div class="agenda-time">08:30 AM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Opening Ceremony</div>
+              <span class="agenda-tag tag-opening">Opening</span>
+            </div>
+            <div class="agenda-speaker">Eng. Ehab El Hady (VIP Guest) · Faculty Leadership · Dr. Samah El-Tantawy (TCCD
+              Director)</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">09:00 AM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Company Booths Open · Mentorship Circles Begin</div>
+              <span class="agenda-tag tag-networking">Networking</span>
+            </div>
+            <div class="agenda-speaker">All participating companies & mentors</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">10:00 AM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "From Projects to Startups"</div>
+              <span class="agenda-tag">Panel · General</span>
+            </div>
+            <div class="agenda-speaker">Ameer Sherif (WUZZUF/FORASNA) · Dina (F6 Ventures)</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">11:00 AM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "Your Personal Brand"</div>
+              <span class="agenda-tag">Panel · General</span>
+            </div>
+            <div class="agenda-speaker">Omar (Customer Success, Schneider Electric · Programs Manager, Eduvate)</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">11:45 AM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Company Talk: NUCA — "From Academia to Industry"</div>
+              <span class="agenda-tag">Talk · Architecture</span>
+            </div>
+            <div class="agenda-speaker">Dr. Amany · Co-founder, 2050 Development Unit, NUCA</div>
+          </div>
+        </div>
+
+        <div class="agenda-item session reveal">
+          <div class="agenda-time">12:00 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Session: "Skills for the Modern Engineer" (Occupational Safety)</div>
+              <span class="agenda-tag">Session · All Majors</span>
+            </div>
+            <div class="agenda-speaker">Eng. Hoda · Consulting Engineer, Egyptian Society for Risk Management</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">12:15 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "Industry 4.0 — Innovation & Automation"</div>
+              <span class="agenda-tag">Panel · Mech/Elec</span>
+            </div>
+            <div class="agenda-speaker">Shady (Eduvate/Schneider) · Eng. Remon (EISAC) · Ahmed (WYA+) · Mohamed Mostafa
+              (Lesaffre)</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">01:30 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "The Student-Professional Bridge"</div>
+              <span class="agenda-tag">Panel · General</span>
+            </div>
+            <div class="agenda-speaker">Mohamed Shawky · Teaching Assistant, Cairo University · Founder, RESK Academy
+            </div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">02:30 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "The Future of Subsea Engineering"</div>
+              <span class="agenda-tag">Panel · General</span>
+            </div>
+            <div class="agenda-speaker">Dr. Elhadidi · Innovation Technical Director, MCS Group</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">02:45 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "AI in Engineering"</div>
+              <span class="agenda-tag">Panel · All Majors</span>
+            </div>
+            <div class="agenda-speaker">Amr (DotPy/AI Catalyst) · Eng. Hossam (SETS) · Prof. Dr. Ahmed Hashad (NWRC)
+            </div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">03:45 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Talk: "Engineering Beyond Borders: Studying Abroad & Scholarships"</div>
+              <span class="agenda-tag">Talk · All</span>
+            </div>
+            <div class="agenda-speaker">Prof. — Cairo University (PhD Johns Hopkins · Research Harvard Medical School)
+            </div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">04:15 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "Mastering Your Career Path"</div>
+              <span class="agenda-tag">Panel · All Majors</span>
+            </div>
+            <div class="agenda-speaker">Ayman (HNI) · Evette (DAR) · Aya (Dell Technologies) · Marwa (Nokia) · Moderated
+              by Islam (Danone)</div>
+          </div>
+        </div>
+
+        <div class="agenda-item keynote reveal">
+          <div class="agenda-time">05:15 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">⭐ KEYNOTE: "How to Make the Most of University & Land Internships"</div>
+              <span class="agenda-tag tag-keynote">Keynote</span>
+            </div>
+            <div class="agenda-speaker">Eng. Youssef — "King of Internships" · Founder, STEM Foundation · 450K+
+              followers</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">05:30 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "Architecture — Space, Experience & Innovation"</div>
+              <span class="agenda-tag">Panel · Arch.</span>
+            </div>
+            <div class="agenda-speaker">Dr. Noeman (Noon Studio / Cairo Univ) · Prof. (Cairo Univ Vice Dean)</div>
+          </div>
+        </div>
+
+        <div class="agenda-item reveal">
+          <div class="agenda-time">06:30 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Panel: "Professional Excellence"</div>
+              <span class="agenda-tag">Panel · All</span>
+            </div>
+            <div class="agenda-speaker">Haidy — Manager, Campus Recruitment, EJADA · HR Training Consultant</div>
+          </div>
+        </div>
+
+        <div class="agenda-item closing reveal">
+          <div class="agenda-time">07:00 PM</div>
+          <div class="agenda-dot"></div>
+          <div class="agenda-body">
+            <div class="agenda-top">
+              <div class="agenda-title">Closing — Company Booths Close</div>
+              <span class="agenda-tag tag-closing">Closing</span>
+            </div>
+            <div class="agenda-speaker">End of event</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANIES -->
+  <section id="companies">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-num">02</div>
+        <div class="section-title-group">
+          <h2 class="section-title">Participating Companies</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">Search and filter by sponsorship tier or industry to find your ideal recruiter</p>
+        </div>
+      </div>
+
+      <div class="toolbar reveal">
+        <div class="search-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input type="text" class="search-input" id="companySearch" placeholder="Search companies, industries, majors…"
+            oninput="handleSearch()">
+        </div>
+        <div class="filter-group">
+          <button class="filter-btn active" onclick="filterCompanies('all',this)">All</button>
+          <button class="filter-btn" onclick="filterCompanies('diamond title',this)">Top Sponsors</button>
+          <button class="filter-btn" onclick="filterCompanies('gold',this)">Gold</button>
+          <button class="filter-btn" onclick="filterCompanies('exhibitor',this)">Exhibitors</button>
+          <button class="filter-btn" onclick="filterCompanies('edu',this)">Education</button>
+        </div>
+        <span class="results-count" id="resultsCount"></span>
+      </div>
+
+      <div class="companies-grid" id="companiesGrid">
+
+        <div class="company-card tier-diamond reveal" data-tier="diamond"
+          data-search="ElSewedy Electric Electrical Infrastructure cables digital diamond">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Diamond Sponsor</div>
+          </div>
+          <div class="company-name">ElSewedy Electric</div>
+          <div class="company-industry">Electrical & Infrastructure · Global</div>
+          <div class="company-desc">Cables, EPC contracting, electrical products, digital solutions & infrastructure
+            investments. VIP: Ahmed ElSewedy (President & CEO) is a special guest of honor.</div>
+          <div class="company-footer"><span class="major-tag">Electrical</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Civil</span><span
+              class="major-tag">Computer</span><span class="major-tag">Communications</span><span
+              class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-title reveal" data-tier="title"
+          data-search="Arab Contractors OAO Construction Infrastructure civil mechanical electrical architecture title">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Title Sponsor</div>
+          </div>
+          <div class="company-name">Arab Contractors (OAO)</div>
+          <div class="company-industry">Construction & Infrastructure · Est. 1955</div>
+          <div class="company-desc">One of the leading construction companies in the Middle East & Africa. Delivers
+            infrastructure, bridges, roads, water/wastewater, buildings & electromechanical works.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span><span class="major-tag">Architecture</span></div>
+        </div>
+
+        <div class="company-card tier-title reveal" data-tier="title"
+          data-search="CCC Consolidated Contractors EPC International Construction civil architecture mechanical electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Title Sponsor</div>
+          </div>
+          <div class="company-name">CCC (Consolidated Contractors)</div>
+          <div class="company-industry">EPC / International Construction · 35,000+ employees</div>
+          <div class="company-desc">International contractor operating in 40+ countries. Full EPC services: feasibility,
+            design, construction, commissioning, O&M across infrastructure, energy, buildings & more.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-title reveal" data-tier="title"
+          data-search="ElSoadaa Group Construction Infrastructure civil architecture electrical mechanical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Title Sponsor</div>
+          </div>
+          <div class="company-name">ElSoadaa Group</div>
+          <div class="company-industry">Construction & Infrastructure</div>
+          <div class="company-desc">Pioneer in the Egyptian construction sector. First Category EFC member with
+            elite-standard execution across key national infrastructure projects.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Electrical</span><span
+              class="major-tag">Mechanical</span></div>
+        </div>
+
+        <div class="company-card tier-title reveal" data-tier="title"
+          data-search="MCS Group Subsea Underwater Technology petroleum mechanical electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Title Sponsor</div>
+          </div>
+          <div class="company-name">MCS Group</div>
+          <div class="company-industry">Subsea / Underwater Technology · Est. 1999</div>
+          <div class="company-desc">Advanced subsea solutions: inspection, survey, ROV services, pipeline & subsea
+            services across energy & ocean industries. Cutting-edge underwater technology.</div>
+          <div class="company-footer"><span class="major-tag">Petroleum</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Petroleum Air Services PAS Aviation aerospace mechanical mechatronics">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Petroleum Air Services (PAS)</div>
+          <div class="company-industry">Aviation / Oil & Gas · Est. 1983</div>
+          <div class="company-desc">Leading Egyptian aviation company. Helicopters & fixed-wing aircraft for oil & gas
+            operations, offshore services, charter flights & aircraft maintenance.</div>
+          <div class="company-footer"><span class="major-tag">Aerospace</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Mechatronics</span><span
+              class="major-tag">Aviation</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Cheiron Oil Gas petroleum chemical mechanical electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Cheiron</div>
+          <div class="company-industry">Oil & Gas (E&P) · Egypt, Mexico, Romania</div>
+          <div class="company-desc">Egypt's leading independent E&P company. Near-field exploration, maximizing
+            production, revitalizing declining fields using advanced oil recovery techniques.</div>
+          <div class="company-footer"><span class="major-tag">Petroleum</span><span
+              class="major-tag">Chemical</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="GateIn Technology AI Cybersecurity Quantum computer communications mechatronics electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">GateIn Technology</div>
+          <div class="company-industry">Technology / AI & Cybersecurity</div>
+          <div class="company-desc">AI, Quantum Computing, Cybersecurity, Digital Forensics & Intelligent Robotics.
+            Integrated systems for businesses, governments & educational institutions.</div>
+          <div class="company-footer"><span class="major-tag">Computer</span><span
+              class="major-tag">Communications</span><span class="major-tag">Mechatronics</span><span
+              class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Lotus Power Clean Tech Robotics mechanical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Lotus Power</div>
+          <div class="company-industry">Clean Tech / Robotics</div>
+          <div class="company-desc">Clean tech and robotics solutions. Sponsors graduation projects, offers internships
+            & hiring opportunities. Pre-event online session April 19th with Co-founder & CTO Dr. Basem Badr.</div>
+          <div class="company-footer"><span class="major-tag">Mechanical</span><span class="major-tag">All related
+              majors</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Miraco Carrier HVAC Refrigeration mechanical electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Miraco (Carrier)</div>
+          <div class="company-industry">HVAC & Refrigeration · Est. 1976</div>
+          <div class="company-desc">Leading HVAC company in Egypt & Africa. 90,000+ m² production facility, 1M+
+            units/year, 1,400+ employees. Manufacturing & distribution of HVAC & commercial refrigeration.</div>
+          <div class="company-footer"><span class="major-tag">Mechanical</span><span class="major-tag">Electrical</span>
+          </div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="LEONI Automotive Wiring electrical mechanical mechatronics">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">LEONI</div>
+          <div class="company-industry">Automotive Wiring · 86,000+ employees · Est. 1917</div>
+          <div class="company-desc">Advanced wiring systems & e-mobility solutions. 21 countries, 15 facilities in
+            Egypt. Leading the future of autonomous driving & EV technology.</div>
+          <div class="company-footer"><span class="major-tag">Electrical</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Mechatronics</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Sumitomo Electric Automotive Wiring electrical mechanical mechatronics">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Sumitomo Electric</div>
+          <div class="company-industry">Automotive Wiring · 400+ Year Heritage</div>
+          <div class="company-desc">Part of the Sumitomo Electric Group. Advanced automotive wiring systems &
+            technologies powering global mobility solutions.</div>
+          <div class="company-footer"><span class="major-tag">Electrical</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Mechatronics</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Rowad Modern Engineering Construction civil architecture mechanical electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Rowad Modern Engineering</div>
+          <div class="company-industry">Engineering & Construction · 25+ Years</div>
+          <div class="company-desc">Large-scale turnkey projects: Beni Suef Power Plant, Benban Solar Park, Olympic
+            Multi-sports Hall. Power, infrastructure & major building projects.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="SETS International Engineering Consulting civil architecture mechanical electrical mechatronics environmental">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">SETS International</div>
+          <div class="company-industry">Multidisciplinary Engineering Consulting · Est. 2004</div>
+          <div class="company-desc">Program/construction management, transport, traffic, infrastructure, water &
+            environment, sustainability, AI, digital, and energy systems engineering.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span><span class="major-tag">Environmental</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Miro Engineering Consultancy Structural Civil MENA civil architecture mechanical electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Miro Engineering Consultancy</div>
+          <div class="company-industry">Structural & Civil Engineering · MENA & North America</div>
+          <div class="company-desc">"We Build Legacies, Not Only Structures." Structural/civil engineering,
+            mega-projects in healthcare, education & residential for public & private sectors.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="EHAF Consulting Engineers civil architecture mechanical electrical mechatronics">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">EHAF Consulting Engineers</div>
+          <div class="company-industry">Engineering & Architecture Consulting · Est. 1971</div>
+          <div class="company-desc">Infrastructure, urban development, healthcare, education & residential projects
+            across the Middle East. 50+ years of engineering excellence.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span><span class="major-tag">Mechatronics</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="DAR Al-Handasah Engineering Design Consulting civil architecture mechanical electrical computer">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">DAR Al-Handasah</div>
+          <div class="company-industry">Engineering & Design Consulting · Est. 1956</div>
+          <div class="company-desc">World-leading consulting firm in engineering, architecture, planning, economics &
+            project management. Contributing to major development projects in Egypt & the region.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span><span class="major-tag">Computer</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="EDECS Marine Infrastructure Construction civil architecture mechanical electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">EDECS</div>
+          <div class="company-industry">Marine & Infrastructure Construction · Est. 1995</div>
+          <div class="company-desc">Marine & port facilities, infrastructure development, water/irrigation, bridges,
+            roads & railways. Large-scale engineering construction across Egypt & MENA.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="SODIC Real Estate civil architecture electrical mechanical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">SODIC Real Estate</div>
+          <div class="company-industry">Real Estate Development · Est. 1996</div>
+          <div class="company-desc">Key player in Egypt's real estate development. High-quality residential, commercial
+            & mixed-use projects with focus on innovation, sustainability & modern urban living.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Electrical</span><span
+              class="major-tag">Mechanical</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="El Hazek Construction civil mechanical electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">El Hazek Construction</div>
+          <div class="company-industry">Construction · Est. 1979</div>
+          <div class="company-desc">Large-scale turnkey projects. Landmark developments including Dusit Thani Hotel &
+            Downtown Katameya Mall. Core of El Hazek Group.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Noon E-commerce Quick-commerce Fintech all majors">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Noon</div>
+          <div class="company-industry">E-commerce / Quick-commerce · KSA, UAE, Egypt</div>
+          <div class="company-desc">E-commerce, quick-commerce, fintech & fashion ecosystem. Founded 2017 in KSA/UAE,
+            expanded to Egypt 2019. Growing network of warehouses & delivery hubs.</div>
+          <div class="company-footer"><span class="major-tag">All Majors</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Bosta Logistics E-commerce Tech computer communications industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Bosta</div>
+          <div class="company-industry">Logistics / E-commerce Tech · Est. 2017</div>
+          <div class="company-desc">One of the fastest-growing tech startups transforming logistics & financing in MEA.
+            End-to-end logistics & financial solutions for e-commerce businesses.</div>
+          <div class="company-footer"><span class="major-tag">Computer</span><span
+              class="major-tag">Communications</span><span class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="WUZZUF iCareer HR Tech Career Platform computer communications industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">WUZZUF & iCareer</div>
+          <div class="company-industry">HR Tech / Career Platform · Egypt's #1 Career Destination</div>
+          <div class="company-desc">Egypt's #1 career destination. 300K+ students, 1M+ hires, thousands of employers.
+            Advanced job matching + data-driven employability programs & mentorship.</div>
+          <div class="company-footer"><span class="major-tag">Computer</span><span
+              class="major-tag">Communications</span><span class="major-tag">Industrial</span><span
+              class="major-tag">All Welcome</span></div>
+        </div>
+
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Atomica AI Health Tech Digital Dentistry computer communications biomedical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Atomica AI</div>
+          <div class="company-industry">Health Tech / Digital Dentistry · US-based, FDA-cleared</div>
+          <div class="company-desc">Pioneer in digital dentistry. AI-powered solutions, 3D technology & robotic dental
+            procedures. Strong Egypt development hub contributing to global healthcare innovation.</div>
+          <div class="company-footer"><span class="major-tag">Computer</span><span
+              class="major-tag">Communications</span><span class="major-tag">Biomedical</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="GPX Egypt Data Centers Digital Infrastructure electrical mechanical communication">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Ultimate Sponsor</div>
+          </div>
+          <div class="company-name">GPX Egypt</div>
+          <div class="company-industry">Data Centers / Digital Infrastructure</div>
+          <div class="company-desc">Global technology leader in Rated-4 carrier-neutral data centers. Cairo I (2007) &
+            Cairo II (2015). Top US/EU standards powering Egypt's digital hub.</div>
+          <div class="company-footer"><span class="major-tag">Electrical</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Communication</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Kahraba Electric Power Energy electrical mechanical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Kahraba</div>
+          <div class="company-industry">Electric Power / Energy · Est. 2004</div>
+          <div class="company-desc">Key player in Egypt's electric power sector. Generates & distributes electricity
+            with reliable, cost-effective end-to-end power solutions through plants & substations.</div>
+          <div class="company-footer"><span class="major-tag">Electrical</span><span class="major-tag">Mechanical</span>
+          </div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Power International Holding Diversified Construction energy civil electrical mechanical communication industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Power International Holding</div>
+          <div class="company-industry">Diversified Conglomerate · Global</div>
+          <div class="company-desc">Construction & infrastructure, energy, TMT, agriculture & food, real estate,
+            hospitality & entertainment. Large-scale projects across the region.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span class="major-tag">Electrical</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Communication</span><span
+              class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="ElSewedy EMG Smart Metering AMI electrical communication computer mechatronics industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">ElSewedy EMG</div>
+          <div class="company-industry">Smart Metering / AMI · 35M+ meters, 50+ countries</div>
+          <div class="company-desc">Advanced Metering Infrastructure (AMI): smart meters, hybrid PLC/RF communication,
+            head-end systems & meter data management. Complete, secure, modular solutions.</div>
+          <div class="company-footer"><span class="major-tag">Electrical</span><span
+              class="major-tag">Communication</span><span class="major-tag">Computer</span><span
+              class="major-tag">Mechatronics</span><span class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Pinnacle Group Architecture Design Consultancy architecture civil">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Pinnacle Group</div>
+          <div class="company-industry">Architecture & Design Consultancy · Est. 2015</div>
+          <div class="company-desc">Fully integrated architectural & design consultancy: architecture, engineering,
+            interior design, visualization & project management.</div>
+          <div class="company-footer"><span class="major-tag">Architecture</span><span class="major-tag">Civil</span>
+          </div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="AlKarma Real Estate civil architecture construction">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">AlKarma Real Estate</div>
+          <div class="company-industry">Real Estate Development · West Cairo</div>
+          <div class="company-desc">Premium residential & commercial destinations in West Cairo. Modern design,
+            sustainability & integrated living experiences. Part of AlKarma Group.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span><span class="major-tag">Construction</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="SLB Schlumberger Energy Oil Gas Technology all majors petroleum">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">SLB (Schlumberger)</div>
+          <div class="company-industry">Energy / Oil & Gas Technology · 100+ Countries</div>
+          <div class="company-desc">Global technology leader in subsurface characterization, drilling, production &
+            digital transformation. Expanding into energy transition: carbon capture, geothermal & hydrogen.</div>
+          <div class="company-footer"><span class="major-tag">All Engineering Majors</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Ejada IT Digital Transformation computer communication software">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Ejada</div>
+          <div class="company-industry">IT / Digital Transformation · 3,500+ professionals</div>
+          <div class="company-desc">Mission-critical technology, digital transformation & strategic consulting for
+            governments & top-tier organizations across the MENA region.</div>
+          <div class="company-footer"><span class="major-tag">Computer</span><span
+              class="major-tag">Communication</span><span class="major-tag">Software</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Envnt IT Consultancy software data engineering">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Envnt</div>
+          <div class="company-industry">IT Consultancy · Est. 2009 · 400+ professionals</div>
+          <div class="company-desc">IT consultancy from strategy to full-scale implementation. 400+ professionals across
+            Riyadh, Cairo, Dubai, Tunisia, Paris & the UK.</div>
+          <div class="company-footer"><span class="major-tag">Software</span><span class="major-tag">Data</span><span
+              class="major-tag">IT</span><span class="major-tag">Engineering</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Midea Electrics Egypt Manufacturing Smart Home Robotics mechanical electrical mechatronics industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Midea Electrics Egypt</div>
+          <div class="company-industry">Manufacturing / Smart Home / Robotics · Global</div>
+          <div class="company-desc">World-leading technology powerhouse. 43 production sites, $8B+ R&D investment, 500M+
+            customers across 200 countries. Smart home, robotics & industrial automation.</div>
+          <div class="company-footer"><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span><span class="major-tag">Mechatronics</span><span
+              class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Air Liquide Industrial Gases Healthcare chemical mechanical electrical industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Air Liquide</div>
+          <div class="company-industry">Industrial Gases / Healthcare · Est. 1902 · 70+ Countries</div>
+          <div class="company-desc">Gases, technologies & services for industry & healthcare. Supporting energy
+            transition, environmental protection, electronics & medical care globally.</div>
+          <div class="company-footer"><span class="major-tag">Chemical</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Electrical</span><span
+              class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="TORRECID Group Chemical Solutions Ceramics chemicals materials industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">TORRECID Group</div>
+          <div class="company-industry">Chemical Solutions / Ceramics · 29 countries · Spain</div>
+          <div class="company-desc">Chemical solutions for ceramics, glass & tableware industries. Drives future trends
+            across industrial applications. Operates in 29 countries, serving clients in 130+.</div>
+          <div class="company-footer"><span class="major-tag">Chemicals</span><span
+              class="major-tag">Materials</span><span class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Ezz Steel Manufacturing mechanical civil electrical industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Ezz Steel</div>
+          <div class="company-industry">Steel Manufacturing · Largest in Middle East</div>
+          <div class="company-desc">Largest steel producer in the Middle East. Plants in Suez, Alexandria, 10th of
+            Ramadan & Sadat City. Leading Egypt's name in the global steel market.</div>
+          <div class="company-footer"><span class="major-tag">Mechanical</span><span class="major-tag">Civil</span><span
+              class="major-tag">Electrical</span><span class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Siemens Digital Industries Industry 4.0 computer communication mechatronics electrical industrial">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Siemens Digital Industries</div>
+          <div class="company-industry">Digital Transformation / Industry 4.0 · Global</div>
+          <div class="company-desc">Digital twin technology, Siemens Xcelerator platform. Software + hardware for
+            design/engineering/manufacturing. Part of Siemens, a global technology leader.</div>
+          <div class="company-footer"><span class="major-tag">Computer</span><span
+              class="major-tag">Communication</span><span class="major-tag">Mechatronics</span><span
+              class="major-tag">Electrical</span><span class="major-tag">Industrial</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Simplex CNC Advanced Manufacturing mechanical mechatronics production">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Simplex CNC</div>
+          <div class="company-industry">CNC / Advanced Manufacturing · Egypt</div>
+          <div class="company-desc">Advanced CNC machines for woodworking, metal & digital manufacturing. Machine
+            supply, maintenance & technical support across Egypt.</div>
+          <div class="company-footer"><span class="major-tag">Mechanical</span><span
+              class="major-tag">Mechatronics</span><span class="major-tag">Production</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="DFA Deutsch für Alle International Germany all majors">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">DFA (Deutsch für Alle)</div>
+          <div class="company-industry">International Opportunities / Germany</div>
+          <div class="company-desc">Connects Egyptian students & professionals with Germany. Pathways to German culture,
+            education & professional careers through programs & initiatives.</div>
+          <div class="company-footer"><span class="major-tag">All Majors</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="EISAC Automation Industrial mechanical materials electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Activity Partner</div>
+          </div>
+          <div class="company-name">EISAC Automation</div>
+          <div class="company-industry">Industrial Automation · Egypt</div>
+          <div class="company-desc">Advanced industrial automation, system integration & smart manufacturing. Author of
+            5 books in automation. Speaker at Industry 4.0 panel.</div>
+          <div class="company-footer"><span class="major-tag">Mechanical</span><span
+              class="major-tag">Materials</span><span class="major-tag">Electrical</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="MAM Engineering Electrical Manufacturing electrical mechanical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">MAM Engineering</div>
+          <div class="company-industry">Electrical Manufacturing · Est. 1998</div>
+          <div class="company-desc">Low-voltage panels & anti-corrosion cable trays. Collaboration with Schneider
+            Electric. Factories in Badr & Obour. Engineering solutions for Egypt's power sector.</div>
+          <div class="company-footer"><span class="major-tag">Electrical Power</span><span class="major-tag">Mechanical
+              Power</span><span class="major-tag">Mechanical Design</span></div>
+        </div>
+
+        <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
+          data-search="Ghataty Auto Automotive Services mechanical mechatronics">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">Ghataty Auto</div>
+          <div class="company-industry">Automotive Services · 75+ branches · Est. 1975</div>
+          <div class="company-desc">Leading automotive company in Egypt with 45+ years of experience. Tires, batteries &
+            full automotive services with top global brands across 75+ branches.</div>
+          <div class="company-footer"><span class="major-tag">Mechanical</span><span
+              class="major-tag">Mechatronics</span><span class="major-tag">All Welcome</span></div>
+        </div>
+
+        <!-- EDU PARTNERS -->
+        <div class="company-card tier-edu reveal" data-tier="edu"
+          data-search="Eduvate Engineering Training Career Development electrical mechanical communications education">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Educational Sponsor</div>
+          </div>
+          <div class="company-name">Eduvate</div>
+          <div class="company-industry">Engineering Training & Career Development</div>
+          <div class="company-desc">Practical, industry-relevant engineering training & certified diplomas. Electrical
+            Distribution, High Voltage, Smart Systems, Revit & ETAP. Flexible Cairo, Tanta & Online options.</div>
+          <div class="company-footer"><span class="major-tag">Electrical</span><span
+              class="major-tag">Mechanical</span><span class="major-tag">Communications</span></div>
+        </div>
+
+        <div class="company-card tier-edu reveal" data-tier="edu"
+          data-search="ENGX Engineering Education Training mechanical electrical civil architecture education">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Educational Partner</div>
+          </div>
+          <div class="company-name">ENGX Engineering</div>
+          <div class="company-industry">Engineering Education / Training · Est. 2017</div>
+          <div class="company-desc">Practical engineering training: HAP, Revit, AutoCAD & the 'No Engineer Doesn't Know'
+            video series. Strong online platform & university partnerships nationwide.</div>
+          <div class="company-footer"><span class="major-tag">Mechanical</span><span
+              class="major-tag">Electrical</span><span class="major-tag">Civil</span><span
+              class="major-tag">Architecture</span></div>
+        </div>
+
+        <div class="company-card tier-edu reveal" data-tier="edu"
+          data-search="CLS Learning Solutions Professional Training all majors education">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Exhibitor</div>
+          </div>
+          <div class="company-name">CLS Learning Solutions</div>
+          <div class="company-industry">Professional Training · 30+ Years · Middle East</div>
+          <div class="company-desc">Leading professional training in the Middle East. Industry-aligned programs that
+            empower individuals, support organizations & enhance workforce capabilities.</div>
+          <div class="company-footer"><span class="major-tag">All Engineering Majors</span></div>
+        </div>
+
+        <div class="company-card tier-edu reveal" data-tier="edu"
+          data-search="RESK Academy Civil Architecture Training education">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Educational Sponsor</div>
+          </div>
+          <div class="company-name">RESK Academy</div>
+          <div class="company-industry">Civil & Architecture Training</div>
+          <div class="company-desc">Dynamic platform for future Civil Engineers & Architects. Hands-on courses,
+            inspiring events & direct connections with industry professionals.</div>
+          <div class="company-footer"><span class="major-tag">Civil</span><span class="major-tag">Architecture</span>
+          </div>
+        </div>
+
+        <div class="company-card tier-edu reveal" data-tier="edu"
+          data-search="Oakland College Egypt Education British American all majors">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Silver Sponsor</div>
+          </div>
+          <div class="company-name">Oakland College Egypt</div>
+          <div class="company-industry">Education (British & American Curriculum)</div>
+          <div class="company-desc">British & American international curriculum school. Instructor opportunities for
+            engineering students in AI, Robotics & Automation (Grades 1–10).</div>
+          <div class="company-footer"><span class="major-tag">All Majors</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section id="speakers">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-num">03</div>
+        <div class="section-title-group">
+          <h2 class="section-title">Speakers & Panelists</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">Industry leaders, founders & academics sharing real insights across 10+ sessions
+          </p>
+        </div>
+      </div>
+      <div class="speakers-grid">
+
+        <div class="speaker-card reveal">
+          <div class="speaker-keynote-badge">⭐ KEYNOTE</div>
+          <div class="speaker-time">05:15 PM</div>
+          <div class="speaker-name">Eng. Youssef</div>
+          <div class="speaker-role">Founder · "King of Internships"</div>
+          <div class="speaker-org">STEM Foundation · 450K+ followers</div>
+          <div class="speaker-panel">How to Make the Most of University & Land Internships</div>
+          <ul class="speaker-topics">
+            <li>Making the most of your university journey</li>
+            <li>The power of activities, clubs & networking</li>
+            <li>How to find real internship opportunities</li>
+            <li>Building a strong CV with little/no experience</li>
+            <li>Common mistakes that cost students opportunities</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Students & Fresh Graduates</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">10:00 AM</div>
+          <div class="speaker-name">Ameer Sherif</div>
+          <div class="speaker-role">Founder & Chairman</div>
+          <div class="speaker-org">WUZZUF / FORASNA · Endeavor Entrepreneur · WEF Young Global Leader</div>
+          <div class="speaker-panel">"From Projects to Startups"</div>
+          <ul class="speaker-topics">
+            <li>Turning ideas into real ventures</li>
+            <li>Funding, incubators & accelerators</li>
+            <li>Technical vs. business founders</li>
+            <li>Learning from failure: real stories</li>
+          </ul>
+          <div class="speaker-audience">🎯 General — All Majors</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">10:00 AM</div>
+          <div class="speaker-name">Dina</div>
+          <div class="speaker-role">Co-founder & General Partner</div>
+          <div class="speaker-org">F6 Ventures · 20+ Years in MENA VC</div>
+          <div class="speaker-panel">"From Projects to Startups"</div>
+          <ul class="speaker-topics">
+            <li>How engineers turn ideas into startups</li>
+            <li>What investors look for in early-stage founders</li>
+            <li>Building & scaling impactful ventures</li>
+            <li>Engineering thinking in entrepreneurship</li>
+          </ul>
+          <div class="speaker-audience">🎯 General — All Majors</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">11:00 AM</div>
+          <div class="speaker-name">Omar</div>
+          <div class="speaker-role">Customer Success · Programs Manager</div>
+          <div class="speaker-org">Schneider Electric · Eduvate · PMP, CCSM certified</div>
+          <div class="speaker-panel">"Your Personal Brand"</div>
+          <ul class="speaker-topics">
+            <li>Building a professional LinkedIn profile</li>
+            <li>The 80/20 content strategy for growth</li>
+            <li>Networking & engagement best practices</li>
+            <li>Tips to stay top-of-mind with recruiters</li>
+          </ul>
+          <div class="speaker-audience">🎯 General — All Majors</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">11:45 AM</div>
+          <div class="speaker-name">Dr. Amany</div>
+          <div class="speaker-role">Co-founder, 2050 Development Unit</div>
+          <div class="speaker-org">NUCA (New Urban Communities Authority)</div>
+          <div class="speaker-panel">NUCA Talk: "From Academia to Industry"</div>
+          <ul class="speaker-topics">
+            <li>Bridging education & industry</li>
+            <li>Practical field training in new cities & live projects</li>
+            <li>Exposure to mega national development projects</li>
+            <li>Smart & sustainable skills for future engineers</li>
+          </ul>
+          <div class="speaker-audience">🎯 Architecture</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">12:00 PM</div>
+          <div class="speaker-name">Eng. Hoda</div>
+          <div class="speaker-role">Consulting Engineer · Certified Trainer</div>
+          <div class="speaker-org">Egyptian Society for Risk Management · Vice Chairman</div>
+          <div class="speaker-panel">"Skills for the Modern Engineer"</div>
+          <ul class="speaker-topics">
+            <li>Rising importance of occupational safety & health</li>
+            <li>Key skills required for the modern engineer</li>
+            <li>Role of technology in occupational safety</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">12:15 PM</div>
+          <div class="speaker-name">Eng. Remon</div>
+          <div class="speaker-role">Founder & CEO</div>
+          <div class="speaker-org">EISAC Automation · Author of 5 books in automation</div>
+          <div class="speaker-panel">"Industry 4.0 — Innovation & Automation"</div>
+          <ul class="speaker-topics">
+            <li>Advanced manufacturing & materials innovation</li>
+            <li>Robotics & industrial automation</li>
+            <li>Continuous improvement & operational efficiency</li>
+          </ul>
+          <div class="speaker-audience">🎯 Mechanical, Materials, Electrical</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">02:30 PM</div>
+          <div class="speaker-name">Dr. Elhadidi</div>
+          <div class="speaker-role">Innovation Technical Director</div>
+          <div class="speaker-org">MCS Group · Former: Underwater Robotics (Singapore) · Aerospace Dept. Head
+            (Kazakhstan)</div>
+          <div class="speaker-panel">"The Future of Subsea Engineering"</div>
+          <ul class="speaker-topics">
+            <li>Diverless subsea engineering solutions</li>
+            <li>Integrating autonomy & AI in harsh environments</li>
+            <li>Case study: designing & operating a remote surface vehicle</li>
+          </ul>
+          <div class="speaker-audience">🎯 General</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">02:45 PM</div>
+          <div class="speaker-name">Prof. Dr. Ahmed Hashad</div>
+          <div class="speaker-role">Vice President · Professor of Structural Engineering</div>
+          <div class="speaker-org">National Water Research Center (NWRC) · PhD Cairo Univ · 29+ yrs leadership</div>
+          <div class="speaker-panel">"AI in Engineering"</div>
+          <ul class="speaker-topics">
+            <li>AI in Civil Engineering: design optimization & smart infrastructure</li>
+            <li>Predictive maintenance for critical hydraulic infrastructure</li>
+            <li>Digital Twins in Egypt's irrigation systems</li>
+          </ul>
+          <div class="speaker-audience">🎯 Civil Engineering</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">04:15 PM</div>
+          <div class="speaker-name">Ayman</div>
+          <div class="speaker-role">Head of HR · CIPD Level 7 · Career Coach</div>
+          <div class="speaker-org">HNI · HR Capsules · 14+ yrs, 7 countries · MBA ESLSCA France</div>
+          <div class="speaker-panel">"Mastering Your Career Path"</div>
+          <ul class="speaker-topics">
+            <li>CV & portfolio tips: avoiding common mistakes</li>
+            <li>Mastering the Engineering Mindset: risk management & problem-solving</li>
+            <li>Interview preparation: technical expertise + soft skills</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">04:15 PM</div>
+          <div class="speaker-name">Evette</div>
+          <div class="speaker-role">Talent Acquisition Lead</div>
+          <div class="speaker-org">DAR · Top 200 Content Creators in Egypt (FAVIKON) · 200+ engineers hired in a single
+            year</div>
+          <div class="speaker-panel">"Mastering Your Career Path"</div>
+          <ul class="speaker-topics">
+            <li>CV tips: common mistakes & GPA vs. skills</li>
+            <li>Choosing the right internship</li>
+            <li>Interview secrets & employer expectations</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">05:30 PM</div>
+          <div class="speaker-name">Dr. Noeman</div>
+          <div class="speaker-role">Founder · Assistant Professor</div>
+          <div class="speaker-org">Noon Studio · Cairo University · Computational Design & AI-driven Architecture</div>
+          <div class="speaker-panel">"Architecture: Space, Experience & Innovation"</div>
+          <ul class="speaker-topics">
+            <li>Adaptive, experience-driven spaces & biomimicry</li>
+            <li>Digital fabrication & award-winning design</li>
+            <li>AI as a tool for ideation, simulation & creative collaboration</li>
+            <li>Architecture as a living, evolving narrative</li>
+          </ul>
+          <div class="speaker-audience">🎯 Architecture Department</div>
+        </div>
+
+        <div class="speaker-card reveal">
+          <div class="speaker-time">06:30 PM</div>
+          <div class="speaker-name">Haidy</div>
+          <div class="speaker-role">Manager, Campus Recruitment · HR Training Consultant</div>
+          <div class="speaker-org">EJADA · MBA in Human Resources Management</div>
+          <div class="speaker-panel">"Professional Excellence"</div>
+          <ul class="speaker-topics">
+            <li>Understanding organizational dynamics & workplace culture</li>
+            <li>Effective communication & emotional intelligence</li>
+            <li>Business meetings etiquette & professional emailing</li>
+            <li>Ethical use of AI in the workplace</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Majors</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTORS -->
+  <section id="mentors">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-num">04</div>
+        <div class="section-title-group">
+          <h2 class="section-title">Mentorship Circles</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">1-on-1 sessions, CV screenings & mock interviews with industry professionals
+            throughout the day</p>
+        </div>
+      </div>
+      <div class="mentors-grid">
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">PepsiCo</div>
+          <div class="mentor-name">Supply Planning Lead</div>
+          <div class="mentor-role">Supply Planning Lead</div>
+          <div class="mentor-topic">"What's behind the textbook in Industrial Engineering & Supply Chain? Theory to real
+            market insights"</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">General</span><span
+              class="mentor-major-tag">Mechanical</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">SODIC</div>
+          <div class="mentor-name">Talent Acquisition Specialist</div>
+          <div class="mentor-role">Full-cycle Recruitment & Talent Development</div>
+          <div class="mentor-topic">Full-cycle recruitment, employer branding & talent development in real estate</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Civil</span><span
+              class="mentor-major-tag">Architectural</span><span class="mentor-major-tag">Mechanical</span><span
+              class="mentor-major-tag">Mechatronics</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">Dentolize</div>
+          <div class="mentor-name">HR Manager</div>
+          <div class="mentor-role">HR Manager · 10+ years experience</div>
+          <div class="mentor-topic">Talent acquisition, HR operations & organizational development in healthcare tech
+          </div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Electronics & Comms</span><span
+              class="mentor-major-tag">Computer</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">EDECS</div>
+          <div class="mentor-name">Senior TA Specialist</div>
+          <div class="mentor-role">Senior Talent Acquisition Specialist</div>
+          <div class="mentor-topic">"Recruiting Gen Z: The Gap Between Talent and Market Expectations"</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Civil</span><span
+              class="mentor-major-tag">Architectural</span><span class="mentor-major-tag">Electrical</span><span
+              class="mentor-major-tag">Mechanical</span><span class="mentor-major-tag">Computer</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">Midea Electrics Egypt</div>
+          <div class="mentor-name">R&D Structure Engineer</div>
+          <div class="mentor-role">R&D Structure Engineer</div>
+          <div class="mentor-topic">Industrial engineering in manufacturing, product development & R&D at a global tech
+            powerhouse</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Mechatronics</span><span
+              class="mentor-major-tag">Electronics & Comms</span><span class="mentor-major-tag">Electrical</span><span
+              class="mentor-major-tag">Mechanical</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">PAS</div>
+          <div class="mentor-name">Fixed Wing & Avionics Manager</div>
+          <div class="mentor-role">Fixed Wing Electric & Avionics Engineering Manager</div>
+          <div class="mentor-topic">Session: "Electric & Avionics Engineering" — aircraft maintenance & airworthiness
+          </div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Electrical</span><span
+              class="mentor-major-tag">Electronics & Comms</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">MARS</div>
+          <div class="mentor-name">Supply Planning Manager</div>
+          <div class="mentor-role">Supply Planning Manager</div>
+          <div class="mentor-topic">"The Launch Pad: How to be ready for Internship & Full-time jobs — kick-off your
+            supply chain career"</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">General</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">Procter & Gamble</div>
+          <div class="mentor-name">Operations Dept. Manager</div>
+          <div class="mentor-role">Operations Department Manager</div>
+          <div class="mentor-topic">High-volume operations, Lean, Six Sigma & process optimization at a global FMCG
+            giant</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Chemical</span><span
+              class="mentor-major-tag">Mechanical</span><span class="mentor-major-tag">Mechatronics</span><span
+              class="mentor-major-tag">General</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">CLS Learning Solutions</div>
+          <div class="mentor-name">Head of Individual Training</div>
+          <div class="mentor-role">Head of Individual Training (B2C)</div>
+          <div class="mentor-topic">"Exploring training paths, required skills per track & guiding you to choose the
+            right career path"</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Computer</span><span
+              class="mentor-major-tag">Electronics & Comms</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">PepsiCo</div>
+          <div class="mentor-name">Engineering Projects Manager</div>
+          <div class="mentor-role">Engineering Projects Manager</div>
+          <div class="mentor-topic">"From Classroom to Corporate — Bridging the Engineering Gap"</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Mechanical</span><span
+              class="mentor-major-tag">Mechatronics</span><span class="mentor-major-tag">Electronics & Comms</span><span
+              class="mentor-major-tag">Electrical</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">Capgemini</div>
+          <div class="mentor-name">AI Architect / Lead Data Scientist</div>
+          <div class="mentor-role">AI Architect / Lead Data Scientist · 11+ years</div>
+          <div class="mentor-topic">"AI, Software Engineering, Software Architecture, Consulting & Career Paths"</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">General</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">ECHEM</div>
+          <div class="mentor-name">Skills Bank Dev. Manager</div>
+          <div class="mentor-role">Skills Bank Development Manager · Career Coach · 16+ years</div>
+          <div class="mentor-topic">"Recruitment Tricks" — talent development & leadership in petrochemicals</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">General</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">Instabug</div>
+          <div class="mentor-name">System Architect</div>
+          <div class="mentor-role">System Architect / Enterprise Support Lead · 7+ years</div>
+          <div class="mentor-topic">Enterprise SaaS, API integrations & distributed systems in a fast-growing Egyptian
+            tech company</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Computer Engineering</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">ReNile</div>
+          <div class="mentor-name">CEO & Founder</div>
+          <div class="mentor-role">CEO & Founder · AI-powered IoT Solutions</div>
+          <div class="mentor-topic">"Business & Innovation" — AI-powered IoT for smart decision-making</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Agriculture Engineering</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">EiremsLens Studio</div>
+          <div class="mentor-name">Co-Founder & CTO</div>
+          <div class="mentor-role">Co-Founder & CTO · XR & WebGL Expert</div>
+          <div class="mentor-topic">"Building Scalable Games & XR Experiences with Unity" — 8+ years Game Dev & XR</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Computer Engineering</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">Lesaffre</div>
+          <div class="mentor-name">Lean Manager</div>
+          <div class="mentor-role">Lean Manager · 10+ years industrial experience</div>
+          <div class="mentor-topic">"Why Being Respectful is Good for Business" — Lean thinking & operational excellence
+          </div>
+          <div class="mentor-majors"><span class="mentor-major-tag">Mechanical</span><span
+              class="mentor-major-tag">Electrical</span><span class="mentor-major-tag">General</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">Voya Developments</div>
+          <div class="mentor-name">CHRO</div>
+          <div class="mentor-role">Chief Human Resources Officer · 20+ years</div>
+          <div class="mentor-topic">"Personal Branding & Interview Skills" — 20+ years HR expertise</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">General</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">ECC Knowledge Group</div>
+          <div class="mentor-name">Senior L&D Specialist</div>
+          <div class="mentor-role">Senior L&D Specialist · Certified Trainer · Game-Based Learning</div>
+          <div class="mentor-topic">"Soft Skills: CV, LinkedIn & Interview Skills" — 4+ years experience</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">General</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">P&G</div>
+          <div class="mentor-name">Project Manager</div>
+          <div class="mentor-role">Project Manager</div>
+          <div class="mentor-topic">"Career Planning & Learning Agility" — FMCG project management insights</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">General</span></div>
+        </div>
+
+        <div class="mentor-card reveal">
+          <div class="mentor-org-chip">Strategy & OD</div>
+          <div class="mentor-name">Regional Lead Consultant</div>
+          <div class="mentor-role">Regional Lead Consultant — Strategy & OD</div>
+          <div class="mentor-topic">"AI, Job Market During Crisis, Diverse Career Portfolio & Gulf Opportunities for
+            Egyptian Calibers"</div>
+          <div class="mentor-majors"><span class="mentor-major-tag">General</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BY MAJOR -->
+  <section id="by-major">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-num">05</div>
+        <div class="section-title-group">
+          <h2 class="section-title">Find Your Opportunities</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">Discover which companies are specifically recruiting from your engineering major
+          </p>
+        </div>
+      </div>
+
+      <div class="major-search-wrap reveal">
+        <svg class="major-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white"
+          stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input type="text" class="major-search" id="majorSearch"
+          placeholder="Type your major (e.g. Civil, Electrical, Computer…)" oninput="filterMajors(this.value)">
+      </div>
+
+      <div class="major-grid" id="majorGrid">
+
+        <div class="major-card reveal" data-major="civil">
+          <div class="major-card-header">
+            <div class="major-card-icon">🏗️</div>
+            <div class="major-card-title">Civil Engineering</div>
+            <div class="major-count">16</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">Arab Contractors</span><span class="major-company-tag">CCC</span><span
+              class="major-company-tag">Rowad Modern Engineering</span><span class="major-company-tag">SETS
+              International</span><span class="major-company-tag">EHAF</span><span class="major-company-tag">DAR
+              Al-Handasah</span><span class="major-company-tag">EDECS</span><span
+              class="major-company-tag">Miro</span><span class="major-company-tag">El Hazek</span><span
+              class="major-company-tag">ElSoadaa Group</span><span class="major-company-tag">Pinnacle Group</span><span
+              class="major-company-tag">SODIC</span><span class="major-company-tag">AlKarma Real Estate</span><span
+              class="major-company-tag">Ezz Steel</span><span class="major-company-tag">RESK Academy</span><span
+              class="major-company-tag">ENGX</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="architecture">
+          <div class="major-card-header">
+            <div class="major-card-icon">🏛️</div>
+            <div class="major-card-title">Architecture</div>
+            <div class="major-count">13</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">Arab Contractors</span><span class="major-company-tag">CCC</span><span
+              class="major-company-tag">SETS International</span><span class="major-company-tag">EHAF</span><span
+              class="major-company-tag">DAR Al-Handasah</span><span class="major-company-tag">EDECS</span><span
+              class="major-company-tag">Miro</span><span class="major-company-tag">Pinnacle Group</span><span
+              class="major-company-tag">SODIC</span><span class="major-company-tag">AlKarma Real Estate</span><span
+              class="major-company-tag">NUCA (Company Talk)</span><span class="major-company-tag">Dr. Noeman
+              Panel</span><span class="major-company-tag">RESK Academy</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="electrical">
+          <div class="major-card-header">
+            <div class="major-card-icon">⚡</div>
+            <div class="major-card-title">Electrical Engineering</div>
+            <div class="major-count">18</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">ElSewedy Electric</span><span class="major-company-tag">Kahraba</span><span
+              class="major-company-tag">LEONI</span><span class="major-company-tag">Sumitomo Electric</span><span
+              class="major-company-tag">Siemens Digital Industries</span><span class="major-company-tag">ElSewedy
+              EMG</span><span class="major-company-tag">GPX Egypt</span><span class="major-company-tag">MAM
+              Engineering</span><span class="major-company-tag">Miraco</span><span class="major-company-tag">Power
+              International</span><span class="major-company-tag">Air Liquide</span><span class="major-company-tag">PAS
+              (Avionics)</span><span class="major-company-tag">SETS</span><span
+              class="major-company-tag">Rowad</span><span class="major-company-tag">EHAF</span><span
+              class="major-company-tag">DAR</span><span class="major-company-tag">Arab Contractors</span><span
+              class="major-company-tag">Eduvate</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="mechanical">
+          <div class="major-card-header">
+            <div class="major-card-icon">⚙️</div>
+            <div class="major-card-title">Mechanical Engineering</div>
+            <div class="major-count">17</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">Arab Contractors</span><span class="major-company-tag">CCC</span><span
+              class="major-company-tag">LEONI</span><span class="major-company-tag">Sumitomo</span><span
+              class="major-company-tag">Miraco</span><span class="major-company-tag">Midea</span><span
+              class="major-company-tag">Ghataty Auto</span><span class="major-company-tag">Simplex CNC</span><span
+              class="major-company-tag">MCS Group</span><span class="major-company-tag">PAS</span><span
+              class="major-company-tag">SETS</span><span class="major-company-tag">Rowad</span><span
+              class="major-company-tag">EHAF</span><span class="major-company-tag">Air Liquide</span><span
+              class="major-company-tag">EISAC Automation</span><span class="major-company-tag">MAM
+              Engineering</span><span class="major-company-tag">Lotus Power</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="mechatronics">
+          <div class="major-card-header">
+            <div class="major-card-icon">🤖</div>
+            <div class="major-card-title">Mechatronics Engineering</div>
+            <div class="major-count">11</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">LEONI</span><span class="major-company-tag">Sumitomo</span><span
+              class="major-company-tag">Siemens</span><span class="major-company-tag">Midea</span><span
+              class="major-company-tag">Simplex CNC</span><span class="major-company-tag">GateIn Technology</span><span
+              class="major-company-tag">SODIC</span><span class="major-company-tag">Power International</span><span
+              class="major-company-tag">ElSewedy EMG</span><span class="major-company-tag">Miraco</span><span
+              class="major-company-tag">SETS</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="computer">
+          <div class="major-card-header">
+            <div class="major-card-icon">💻</div>
+            <div class="major-card-title">Computer Engineering</div>
+            <div class="major-count">12</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">ElSewedy Electric</span><span class="major-company-tag">Siemens</span><span
+              class="major-company-tag">GateIn Technology</span><span class="major-company-tag">Ejada</span><span
+              class="major-company-tag">Envnt</span><span class="major-company-tag">Bosta</span><span
+              class="major-company-tag">WUZZUF & iCareer</span><span class="major-company-tag">Atomica AI</span><span
+              class="major-company-tag">ElSewedy EMG</span><span class="major-company-tag">Instabug (Mentor)</span><span
+              class="major-company-tag">EiremsLens Studio (Mentor)</span><span class="major-company-tag">Capgemini
+              (Mentor)</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="communications electronics">
+          <div class="major-card-header">
+            <div class="major-card-icon">📡</div>
+            <div class="major-card-title">Communications & Electronics</div>
+            <div class="major-count">10</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">ElSewedy Electric</span><span class="major-company-tag">GPX
+              Egypt</span><span class="major-company-tag">ElSewedy EMG</span><span class="major-company-tag">GateIn
+              Technology</span><span class="major-company-tag">LEONI</span><span
+              class="major-company-tag">Sumitomo</span><span class="major-company-tag">Siemens</span><span
+              class="major-company-tag">Ejada</span><span class="major-company-tag">Atomica AI</span><span
+              class="major-company-tag">PAS</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="industrial">
+          <div class="major-card-header">
+            <div class="major-card-icon">🏭</div>
+            <div class="major-card-title">Industrial Engineering</div>
+            <div class="major-count">8</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">Siemens</span><span class="major-company-tag">Midea</span><span
+              class="major-company-tag">Power International</span><span class="major-company-tag">ElSewedy
+              EMG</span><span class="major-company-tag">Air Liquide</span><span class="major-company-tag">Ezz
+              Steel</span><span class="major-company-tag">Bosta</span><span class="major-company-tag">WUZZUF &
+              iCareer</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="chemical">
+          <div class="major-card-header">
+            <div class="major-card-icon">🧪</div>
+            <div class="major-card-title">Chemical Engineering</div>
+            <div class="major-count">4</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">Cheiron</span><span class="major-company-tag">Air Liquide</span><span
+              class="major-company-tag">TORRECID Group</span><span class="major-company-tag">Ezz Steel</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="petroleum">
+          <div class="major-card-header">
+            <div class="major-card-icon">🛢️</div>
+            <div class="major-card-title">Petroleum Engineering</div>
+            <div class="major-count">3</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">Cheiron</span><span class="major-company-tag">SLB (Schlumberger)</span><span
+              class="major-company-tag">MCS Group</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="aerospace aviation">
+          <div class="major-card-header">
+            <div class="major-card-icon">✈️</div>
+            <div class="major-card-title">Aerospace Engineering</div>
+            <div class="major-count">2</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">Petroleum Air Services (PAS)</span><span class="major-company-tag">Aviation
+              Technology Company</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="biomedical">
+          <div class="major-card-header">
+            <div class="major-card-icon">🏥</div>
+            <div class="major-card-title">Biomedical Engineering</div>
+            <div class="major-count">3</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">Midea (Robotics)</span><span class="major-company-tag">Atomica
+              AI</span><span class="major-company-tag">Oakland College (Teaching)</span>
+          </div>
+        </div>
+
+        <div class="major-card reveal" data-major="all">
+          <div class="major-card-header">
+            <div class="major-card-icon">🎯</div>
+            <div class="major-card-title">All Majors Welcome</div>
+            <div class="major-count">10</div>
+          </div>
+          <div class="major-companies">
+            <span class="major-company-tag">WUZZUF & iCareer</span><span class="major-company-tag">SLB</span><span
+              class="major-company-tag">DFA (Germany)</span><span class="major-company-tag">Oakland College</span><span
+              class="major-company-tag">Noon</span><span class="major-company-tag">CLS Learning Solutions</span><span
+              class="major-company-tag">Bosta</span><span class="major-company-tag">RESK Academy</span><span
+              class="major-company-tag">ENGX</span><span class="major-company-tag">Eduvate</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">TCCD 30th Job Fair 2026</div>
+    <p>Faculty of Engineering – Cairo University · April 22nd, 2026 · 9 AM – 7 PM</p>
+    <p>Organized by <strong>Technical Center for Career Development (TCCD)</strong></p>
+    <p>Director: <strong>Assoc. Prof. Dr. Samah El-Tantawy</strong></p>
+    <p>Made By: <strong>Omar EL-alfie &nbsp;</strong>
+      <a href="https://www.linkedin.com/in/omar-k-740544238/" target="_blank" rel="noopener" class="social-icon-link"
+        title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"
+          aria-label="LinkedIn" style="vertical-align: middle;">
+          <path d="M20,2H4C2.9,2,2,2.9,2,4v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M8.1,18H5V9.4h3.1V18z M6.5,8.4
+	L6.5,8.4C5.6,8.4,5,7.8,5,7s0.6-1.4,1.6-1.4c0.9,0,1.5,0.6,1.5,1.4S7.5,8.4,6.5,8.4z M19,18h-3.1v-4.7c0-1.3-0.8-1.6-1.1-1.6
+	s-1.3,0.2-1.3,1.6c0,0.2,0,4.7,0,4.7h-3.1V9.4h3.1v1.2c0.4-0.7,1.2-1.2,2.7-1.2s2.7,1.2,2.7,3.9L19,18L19,18z" />
+        </svg></a>
+      <a href="https://github.com/omarkhhamad" target="_blank" rel="noopener" class="social-icon-link" title="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"
+          aria-label="GitHub" style="vertical-align: middle;">
+          <path
+            d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" />
+        </svg></a>
+    </p>
+    <div class="footer-divider"></div>
+    <p class="footer-tagline">A Move to Improve · 30 Editions of Excellence</p>
+  </footer>
+
+  <script>
+    // ── NAV SCROLL ──
+    const nav = document.getElementById('mainNav');
+    const btt = document.getElementById('btt');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) { nav.classList.add('scrolled'); btt.classList.add('show'); }
+      else { nav.classList.remove('scrolled'); btt.classList.remove('show'); }
+    });
+
+    // ── COMPANY SEARCH + FILTER ──
+    let currentTier = 'all';
+    function filterCompanies(tier, btn) {
+      currentTier = tier;
+      if (btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      applyCompanyFilter();
+    }
+
+    function handleSearch() { applyCompanyFilter(); }
+
+    function applyCompanyFilter() {
+      const q = document.getElementById('companySearch').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.company-card');
+      let visible = 0;
+      cards.forEach(card => {
+        const tier = card.dataset.tier;
+        const searchText = (card.dataset.search + ' ' + card.textContent).toLowerCase();
+        const tierMatch = currentTier === 'all' || currentTier.split(' ').includes(tier);
+        const searchMatch = !q || searchText.includes(q);
+        if (tierMatch && searchMatch) { card.style.display = ''; visible++; }
+        else card.style.display = 'none';
+      });
+      const rc = document.getElementById('resultsCount');
+      rc.textContent = visible === cards.length ? `${visible} companies` : `${visible} of ${cards.length}`;
+    }
+
+    // init count
+    document.addEventListener('DOMContentLoaded', () => {
+      const total = document.querySelectorAll('.company-card').length;
+      document.getElementById('resultsCount').textContent = `${total} companies`;
+    });
+
+    // ── MAJOR SEARCH ──
+    function filterMajors(q) {
+      const s = q.toLowerCase().trim();
+      document.querySelectorAll('.major-card').forEach(card => {
+        card.style.display = (!s ||
+          card.dataset.major.includes(s) ||
+          card.querySelector('.major-card-title').textContent.toLowerCase().includes(s) ||
+          card.querySelector('.major-companies').textContent.toLowerCase().includes(s))
+          ? '' : 'none';
+      });
+    }
+
+    // ── SCROLL REVEAL ──
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 50);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>
