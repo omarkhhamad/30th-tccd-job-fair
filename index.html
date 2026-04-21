@@ -1033,6 +1033,63 @@
       border-radius: 4px;
     }
 
+    /* ── SPEAKER FILTERS ── */
+    .speaker-filter-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      padding: 1rem 1.25rem;
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--gray-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .speaker-filter-label {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      white-space: nowrap;
+    }
+
+    .speaker-filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+
+    .speaker-filter-btn {
+      font-family: 'Syne', sans-serif;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: .38rem .9rem;
+      border-radius: 99px;
+      border: 1.5px solid var(--gray-soft);
+      background: transparent;
+      color: var(--gray-dark);
+      cursor: pointer;
+      transition: all .2s;
+      white-space: nowrap;
+    }
+
+    .speaker-filter-btn.active {
+      background: var(--blue-deep);
+      border-color: var(--blue-deep);
+      color: var(--white);
+    }
+
+    .speaker-filter-btn:hover:not(.active) {
+      border-color: var(--blue-mid);
+      color: var(--blue-mid);
+      background: var(--blue-light);
+    }
+
     /* ── MENTORS ── */
     #mentors {
       background: var(--paper);
@@ -1442,7 +1499,6 @@
       <li><a href="#agenda">Schedule</a></li>
       <li><a href="#companies">Companies</a></li>
       <li><a href="#speakers">Speakers</a></li>
-      <li><a href="#mentors">Mentors</a></li>
       <li><a href="#by-major">By Major</a></li>
     </ul>
     <div class="nav-right">
@@ -1617,7 +1673,7 @@
               <div class="agenda-title">Panel: "The Future of Subsea Engineering"</div>
               <span class="agenda-tag">Panel · General</span>
             </div>
-            <div class="agenda-speaker">Dr. Elhadidi · Innovation Technical Director, MCS Group</div>
+            <div class="agenda-speaker">Dr. Basman Elhadidi · Innovation Technical Director, MCS Group</div>
           </div>
         </div>
 
@@ -1642,7 +1698,7 @@
               <div class="agenda-title">Talk: "Engineering Beyond Borders: Studying Abroad & Scholarships"</div>
               <span class="agenda-tag">Talk · All</span>
             </div>
-            <div class="agenda-speaker">Prof. — Cairo University (PhD Johns Hopkins · Research Harvard Medical School)
+            <div class="agenda-speaker">Dr. Tamer Basha (PhD Johns Hopkins · Research Harvard Medical School)
             </div>
           </div>
         </div>
@@ -2096,6 +2152,19 @@
               class="major-tag">Communications</span><span class="major-tag">Biomedical</span></div>
         </div>
 
+        <div class="company-card tier-gold reveal" data-tier="gold"
+          data-search="Vodafone Telecommunications Digital Services IoT fintech communications computer electrical">
+          <div class="company-card-accent"></div>
+          <div class="card-header">
+            <div class="company-tier">Gold Sponsor</div>
+          </div>
+          <div class="company-name">Vodafone</div>
+          <div class="company-industry">Telecommunications / Digital Services · Global Leader</div>
+          <div class="company-desc">Global telecommunications leader operating in Egypt since 1998. Advanced connectivity solutions, digital services, IoT innovations & Vodafone Cash fintech ecosystem enabling smart business & personal connectivity.</div>
+          <div class="company-footer"><span class="major-tag">Communications</span><span
+              class="major-tag">Computer</span><span class="major-tag">Electrical</span></div>
+        </div>
+
         <div class="company-card tier-exhibitor reveal" data-tier="exhibitor"
           data-search="GPX Egypt Data Centers Digital Infrastructure electrical mechanical communication">
           <div class="company-card-accent"></div>
@@ -2451,9 +2520,337 @@
           </p>
         </div>
       </div>
-      <div class="speakers-grid">
+      <div class="speaker-filter-toolbar reveal">
+        <span class="speaker-filter-label">Filter by Field:</span>
+        <div class="speaker-filter-group">
+          <button class="speaker-filter-btn active" onclick="filterSpeakers('all')">All</button>
+          <button class="speaker-filter-btn" onclick="filterSpeakers('Entrepreneurship')">Entrepreneurship</button>
+          <button class="speaker-filter-btn" onclick="filterSpeakers('Personal Branding')">Personal Branding</button>
+          <button class="speaker-filter-btn" onclick="filterSpeakers('Industry 4.0')">Industry 4.0</button>
+          <button class="speaker-filter-btn" onclick="filterSpeakers('AI')">AI & Innovation</button>
+          <button class="speaker-filter-btn" onclick="filterSpeakers('Career Development')">Career Development</button>
+          <button class="speaker-filter-btn" onclick="filterSpeakers('Architecture')">Architecture</button>
+          <button class="speaker-filter-btn" onclick="filterSpeakers('HR')">HR & Recruitment</button>
+        </div>
+      </div>
+      <div class="speakers-grid" id="speakersGrid">
 
-        <div class="speaker-card reveal">
+        <div class="speaker-card reveal" data-field="Entrepreneurship">
+          <div class="speaker-time">10:00 AM</div>
+          <div class="speaker-name">Ameer Sherif</div>
+          <div class="speaker-role">Founder & Chairman</div>
+          <div class="speaker-org">WUZZUF / FORASNA · Endeavor Entrepreneur · WEF Young Global Leader</div>
+          <div class="speaker-panel">"From Projects to Startups"</div>
+          <ul class="speaker-topics">
+            <li>Turning ideas into real ventures</li>
+            <li>Funding, incubators & accelerators</li>
+            <li>Technical vs. business founders</li>
+            <li>Learning from failure: real stories</li>
+          </ul>
+          <div class="speaker-audience">🎯 General — All Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Entrepreneurship">
+          <div class="speaker-time">10:00 AM</div>
+          <div class="speaker-name">Dina</div>
+          <div class="speaker-role">Co-founder & General Partner</div>
+          <div class="speaker-org">F6 Ventures · 20+ Years in MENA VC</div>
+          <div class="speaker-panel">"From Projects to Startups"</div>
+          <ul class="speaker-topics">
+            <li>How engineers turn ideas into startups</li>
+            <li>What investors look for in early-stage founders</li>
+            <li>Building & scaling impactful ventures</li>
+            <li>Engineering thinking in entrepreneurship</li>
+          </ul>
+          <div class="speaker-audience">🎯 General — All Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Personal Branding">
+          <div class="speaker-time">11:00 AM</div>
+          <div class="speaker-name">Omar</div>
+          <div class="speaker-role">Customer Success · Programs Manager</div>
+          <div class="speaker-org">Schneider Electric · Eduvate · PMP, CCSM certified</div>
+          <div class="speaker-panel">"Your Personal Brand"</div>
+          <ul class="speaker-topics">
+            <li>Building a professional LinkedIn profile</li>
+            <li>The 80/20 content strategy for growth</li>
+            <li>Networking & engagement best practices</li>
+            <li>Tips to stay top-of-mind with recruiters</li>
+          </ul>
+          <div class="speaker-audience">🎯 General — All Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="AI">
+          <div class="speaker-time">11:30 AM</div>
+          <div class="speaker-name">Nasser Fikry</div>
+          <div class="speaker-role">Marketing & Partnerships Manager</div>
+          <div class="speaker-org">GateIn Tech</div>
+          <div class="speaker-panel">"Next-Gen Tech: AI & Quantum Computing"</div>
+          <ul class="speaker-topics">
+            <li>AI & Quantum Computing in Engineering</li>
+            <li>Next generation technology trends</li>
+            <li>Business development in tech sector</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Majors Interested in Tech & Innovation</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Architecture">
+          <div class="speaker-time">11:45 AM</div>
+          <div class="speaker-name">Dr. Amany</div>
+          <div class="speaker-role">Co-founder, 2050 Development Unit</div>
+          <div class="speaker-org">NUCA (New Urban Communities Authority)</div>
+          <div class="speaker-panel">NUCA Talk: "From Academia to Industry"</div>
+          <ul class="speaker-topics">
+            <li>Bridging education & industry</li>
+            <li>Practical field training in new cities & live projects</li>
+            <li>Exposure to mega national development projects</li>
+            <li>Smart & sustainable skills for future engineers</li>
+          </ul>
+          <div class="speaker-audience">🎯 Architecture</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Career Development">
+          <div class="speaker-time">12:00 PM</div>
+          <div class="speaker-name">Eng. Hoda</div>
+          <div class="speaker-role">Consulting Engineer · Certified Trainer</div>
+          <div class="speaker-org">Egyptian Society for Risk Management · Vice Chairman</div>
+          <div class="speaker-panel">"Skills for the Modern Engineer"</div>
+          <ul class="speaker-topics">
+            <li>Rising importance of occupational safety & health</li>
+            <li>Key skills required for the modern engineer</li>
+            <li>Role of technology in occupational safety</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Industry 4.0">
+          <div class="speaker-time">12:15 PM</div>
+          <div class="speaker-name">Shady</div>
+          <div class="speaker-role">Founder</div>
+          <div class="speaker-org">Eduvate / Schneider Electric</div>
+          <div class="speaker-panel">"Industry 4.0 — Innovation & Automation"</div>
+          <ul class="speaker-topics">
+            <li>Industrial Engineering in modern manufacturing</li>
+            <li>Energy sector innovations</li>
+            <li>Training & development in Industry 4.0</li>
+          </ul>
+          <div class="speaker-audience">🎯 Mechanical, Materials, Electrical</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Industry 4.0">
+          <div class="speaker-time">12:15 PM</div>
+          <div class="speaker-name">Eng. Remon</div>
+          <div class="speaker-role">Founder & CEO</div>
+          <div class="speaker-org">EISAC Automation · Author of 5 books in automation</div>
+          <div class="speaker-panel">"Industry 4.0 — Innovation & Automation"</div>
+          <ul class="speaker-topics">
+            <li>Advanced manufacturing & materials innovation</li>
+            <li>Robotics & industrial automation</li>
+            <li>Continuous improvement & operational efficiency</li>
+          </ul>
+          <div class="speaker-audience">🎯 Mechanical, Materials, Electrical</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Industry 4.0">
+          <div class="speaker-time">12:15 PM</div>
+          <div class="speaker-name">Ahmed</div>
+          <div class="speaker-role">Quality Control Engineer</div>
+          <div class="speaker-org">WYA+ Engineering Services</div>
+          <div class="speaker-panel">"Industry 4.0 — Innovation & Automation"</div>
+          <ul class="speaker-topics">
+            <li>MEP & BIM in modern design</li>
+            <li>Mechanical design optimization</li>
+            <li>Quality assurance in manufacturing</li>
+          </ul>
+          <div class="speaker-audience">🎯 Mechanical Design, Electrical Power, General</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Industry 4.0">
+          <div class="speaker-time">12:15 PM</div>
+          <div class="speaker-name">Mohamed Mostafa</div>
+          <div class="speaker-role">Lean Manager</div>
+          <div class="speaker-org">Lesaffre</div>
+          <div class="speaker-panel">"Industry 4.0 — Innovation & Automation"</div>
+          <ul class="speaker-topics">
+            <li>Lean Manufacturing principles</li>
+            <li>Continuous Improvement methodology</li>
+            <li>Operational Excellence</li>
+          </ul>
+          <div class="speaker-audience">🎯 Mechanical Design, Electrical Power, General</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Career Development">
+          <div class="speaker-time">01:30 PM</div>
+          <div class="speaker-name">Mohamed Shawky</div>
+          <div class="speaker-role">Teaching Assistant / Founder</div>
+          <div class="speaker-org">Cairo University / RESK Academy</div>
+          <div class="speaker-panel">"The Student-Professional Bridge"</div>
+          <ul class="speaker-topics">
+            <li>Transitioning from academics to industry</li>
+            <li>Civil & Architectural Engineering careers</li>
+            <li>Career path planning for students</li>
+          </ul>
+          <div class="speaker-audience">🎯 General — All Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="AI">
+          <div class="speaker-time">02:30 PM</div>
+          <div class="speaker-name">Dr. Basman Elhadidi</div>
+          <div class="speaker-role">Innovation Technical Director</div>
+          <div class="speaker-org">MCS Group · Former: Underwater Robotics (Singapore) · Aerospace Dept. Head
+            (Kazakhstan)</div>
+          <div class="speaker-panel">"The Future of Subsea Engineering"</div>
+          <ul class="speaker-topics">
+            <li>Diverless subsea engineering solutions</li>
+            <li>Integrating autonomy & AI in harsh environments</li>
+            <li>Case study: designing & operating a remote surface vehicle</li>
+          </ul>
+          <div class="speaker-audience">🎯 General</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="AI">
+          <div class="speaker-time">02:45 PM</div>
+          <div class="speaker-name">Amr</div>
+          <div class="speaker-role">Founder</div>
+          <div class="speaker-org">DotPy & AI Catalyst</div>
+          <div class="speaker-panel">"AI in Engineering"</div>
+          <ul class="speaker-topics">
+            <li>Artificial Intelligence in engineering applications</li>
+            <li>Machine Learning fundamentals</li>
+            <li>AI catalyst programs & startups</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="AI">
+          <div class="speaker-time">02:45 PM</div>
+          <div class="speaker-name">Eng. Hossam</div>
+          <div class="speaker-role">Head of Traffic Engineering</div>
+          <div class="speaker-org">SETS International</div>
+          <div class="speaker-panel">"AI in Engineering"</div>
+          <ul class="speaker-topics">
+            <li>Transportation Engineering & ITS</li>
+            <li>AI in traffic management systems</li>
+            <li>Smart infrastructure solutions</li>
+          </ul>
+          <div class="speaker-audience">🎯 General</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="AI">
+          <div class="speaker-time">02:45 PM</div>
+          <div class="speaker-name">Prof. Dr. Ahmed Hashad</div>
+          <div class="speaker-role">Vice President · Professor of Structural Engineering</div>
+          <div class="speaker-org">National Water Research Center (NWRC) · PhD Cairo Univ · 29+ yrs leadership</div>
+          <div class="speaker-panel">"AI in Engineering"</div>
+          <ul class="speaker-topics">
+            <li>AI in Civil Engineering: design optimization & smart infrastructure</li>
+            <li>Predictive maintenance for critical hydraulic infrastructure</li>
+            <li>Digital Twins in Egypt's irrigation systems</li>
+          </ul>
+          <div class="speaker-audience">🎯 Civil Engineering</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="AI">
+          <div class="speaker-time">02:45 PM</div>
+          <div class="speaker-name">Ahmed Zaazaa</div>
+          <div class="speaker-role">Lead Data Scientist & AI Architect</div>
+          <div class="speaker-org">Capgemini (11 yrs, 40+ projects, 9 industries)</div>
+          <div class="speaker-panel">"AI x Engineering: Redefining Innovation"</div>
+          <ul class="speaker-topics">
+            <li>AI & Data Science in engineering</li>
+            <li>Software Engineering best practices</li>
+            <li>Innovation through AI-driven solutions</li>
+          </ul>
+          <div class="speaker-audience">🎯 Architecture, Civil & All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Career Development">
+          <div class="speaker-time">03:45 PM</div>
+          <div class="speaker-name">Dr. Tamer Basha</div>
+          <div class="speaker-role">Professor · PhD Johns Hopkins</div>
+          <div class="speaker-org">Cairo University</div>
+          <div class="speaker-panel">"Engineering Beyond Borders: Studying Abroad & Scholarships"</div>
+          <ul class="speaker-topics">
+            <li>International education opportunities for engineers</li>
+            <li>Studying abroad: process, funding & scholarships</li>
+            <li>Biomedical Engineering career paths globally</li>
+            <li>Building international networks as an engineer</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Students & Graduates</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="HR">
+          <div class="speaker-time">04:15 PM</div>
+          <div class="speaker-name">Ayman</div>
+          <div class="speaker-role">Head of HR · CIPD Level 7 · Career Coach</div>
+          <div class="speaker-org">HNI · HR Capsules · 14+ yrs, 7 countries · MBA ESLSCA France</div>
+          <div class="speaker-panel">"Mastering Your Career Path"</div>
+          <ul class="speaker-topics">
+            <li>CV & portfolio tips: avoiding common mistakes</li>
+            <li>Mastering the Engineering Mindset: risk management & problem-solving</li>
+            <li>Interview preparation: technical expertise + soft skills</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="HR">
+          <div class="speaker-time">04:15 PM</div>
+          <div class="speaker-name">Evette</div>
+          <div class="speaker-role">Talent Acquisition Lead</div>
+          <div class="speaker-org">DAR · Top 200 Content Creators in Egypt (FAVIKON) · 200+ engineers hired in a single
+            year</div>
+          <div class="speaker-panel">"Mastering Your Career Path"</div>
+          <ul class="speaker-topics">
+            <li>CV tips: common mistakes & GPA vs. skills</li>
+            <li>Choosing the right internship</li>
+            <li>Interview secrets & employer expectations</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="HR">
+          <div class="speaker-time">04:15 PM</div>
+          <div class="speaker-name">Islam</div>
+          <div class="speaker-role">People & Capability Partner</div>
+          <div class="speaker-org">Danone</div>
+          <div class="speaker-panel">"Mastering Your Career Path"</div>
+          <ul class="speaker-topics">
+            <li>HR & Talent Management</li>
+            <li>Organizational development</li>
+            <li>Career path planning in large organizations</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="HR">
+          <div class="speaker-time">04:15 PM</div>
+          <div class="speaker-name">Aya</div>
+          <div class="speaker-role">Sr. Program Manager / Design Thinking Coach</div>
+          <div class="speaker-org">Dell Technologies</div>
+          <div class="speaker-panel">"Mastering Your Career Path"</div>
+          <ul class="speaker-topics">
+            <li>Business Transformation</li>
+            <li>Engineering Enablement</li>
+            <li>Design Thinking in career development</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="HR">
+          <div class="speaker-time">04:15 PM</div>
+          <div class="speaker-name">Marwa</div>
+          <div class="speaker-role">Talent Acquisition Partner MEA</div>
+          <div class="speaker-org">Nokia</div>
+          <div class="speaker-panel">"Mastering Your Career Path"</div>
+          <ul class="speaker-topics">
+            <li>HR & Talent Acquisition strategies</li>
+            <li>International career opportunities</li>
+            <li>Recruitment trends in MEA region</li>
+          </ul>
+          <div class="speaker-audience">🎯 All Engineering Majors</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="Career Development">
           <div class="speaker-keynote-badge">⭐ KEYNOTE</div>
           <div class="speaker-time">05:15 PM</div>
           <div class="speaker-name">Eng. Youssef</div>
@@ -2470,153 +2867,7 @@
           <div class="speaker-audience">🎯 All Students & Fresh Graduates</div>
         </div>
 
-        <div class="speaker-card reveal">
-          <div class="speaker-time">10:00 AM</div>
-          <div class="speaker-name">Ameer Sherif</div>
-          <div class="speaker-role">Founder & Chairman</div>
-          <div class="speaker-org">WUZZUF / FORASNA · Endeavor Entrepreneur · WEF Young Global Leader</div>
-          <div class="speaker-panel">"From Projects to Startups"</div>
-          <ul class="speaker-topics">
-            <li>Turning ideas into real ventures</li>
-            <li>Funding, incubators & accelerators</li>
-            <li>Technical vs. business founders</li>
-            <li>Learning from failure: real stories</li>
-          </ul>
-          <div class="speaker-audience">🎯 General — All Majors</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">10:00 AM</div>
-          <div class="speaker-name">Dina</div>
-          <div class="speaker-role">Co-founder & General Partner</div>
-          <div class="speaker-org">F6 Ventures · 20+ Years in MENA VC</div>
-          <div class="speaker-panel">"From Projects to Startups"</div>
-          <ul class="speaker-topics">
-            <li>How engineers turn ideas into startups</li>
-            <li>What investors look for in early-stage founders</li>
-            <li>Building & scaling impactful ventures</li>
-            <li>Engineering thinking in entrepreneurship</li>
-          </ul>
-          <div class="speaker-audience">🎯 General — All Majors</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">11:00 AM</div>
-          <div class="speaker-name">Omar</div>
-          <div class="speaker-role">Customer Success · Programs Manager</div>
-          <div class="speaker-org">Schneider Electric · Eduvate · PMP, CCSM certified</div>
-          <div class="speaker-panel">"Your Personal Brand"</div>
-          <ul class="speaker-topics">
-            <li>Building a professional LinkedIn profile</li>
-            <li>The 80/20 content strategy for growth</li>
-            <li>Networking & engagement best practices</li>
-            <li>Tips to stay top-of-mind with recruiters</li>
-          </ul>
-          <div class="speaker-audience">🎯 General — All Majors</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">11:45 AM</div>
-          <div class="speaker-name">Dr. Amany</div>
-          <div class="speaker-role">Co-founder, 2050 Development Unit</div>
-          <div class="speaker-org">NUCA (New Urban Communities Authority)</div>
-          <div class="speaker-panel">NUCA Talk: "From Academia to Industry"</div>
-          <ul class="speaker-topics">
-            <li>Bridging education & industry</li>
-            <li>Practical field training in new cities & live projects</li>
-            <li>Exposure to mega national development projects</li>
-            <li>Smart & sustainable skills for future engineers</li>
-          </ul>
-          <div class="speaker-audience">🎯 Architecture</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">12:00 PM</div>
-          <div class="speaker-name">Eng. Hoda</div>
-          <div class="speaker-role">Consulting Engineer · Certified Trainer</div>
-          <div class="speaker-org">Egyptian Society for Risk Management · Vice Chairman</div>
-          <div class="speaker-panel">"Skills for the Modern Engineer"</div>
-          <ul class="speaker-topics">
-            <li>Rising importance of occupational safety & health</li>
-            <li>Key skills required for the modern engineer</li>
-            <li>Role of technology in occupational safety</li>
-          </ul>
-          <div class="speaker-audience">🎯 All Engineering Majors</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">12:15 PM</div>
-          <div class="speaker-name">Eng. Remon</div>
-          <div class="speaker-role">Founder & CEO</div>
-          <div class="speaker-org">EISAC Automation · Author of 5 books in automation</div>
-          <div class="speaker-panel">"Industry 4.0 — Innovation & Automation"</div>
-          <ul class="speaker-topics">
-            <li>Advanced manufacturing & materials innovation</li>
-            <li>Robotics & industrial automation</li>
-            <li>Continuous improvement & operational efficiency</li>
-          </ul>
-          <div class="speaker-audience">🎯 Mechanical, Materials, Electrical</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">02:30 PM</div>
-          <div class="speaker-name">Dr. Elhadidi</div>
-          <div class="speaker-role">Innovation Technical Director</div>
-          <div class="speaker-org">MCS Group · Former: Underwater Robotics (Singapore) · Aerospace Dept. Head
-            (Kazakhstan)</div>
-          <div class="speaker-panel">"The Future of Subsea Engineering"</div>
-          <ul class="speaker-topics">
-            <li>Diverless subsea engineering solutions</li>
-            <li>Integrating autonomy & AI in harsh environments</li>
-            <li>Case study: designing & operating a remote surface vehicle</li>
-          </ul>
-          <div class="speaker-audience">🎯 General</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">02:45 PM</div>
-          <div class="speaker-name">Prof. Dr. Ahmed Hashad</div>
-          <div class="speaker-role">Vice President · Professor of Structural Engineering</div>
-          <div class="speaker-org">National Water Research Center (NWRC) · PhD Cairo Univ · 29+ yrs leadership</div>
-          <div class="speaker-panel">"AI in Engineering"</div>
-          <ul class="speaker-topics">
-            <li>AI in Civil Engineering: design optimization & smart infrastructure</li>
-            <li>Predictive maintenance for critical hydraulic infrastructure</li>
-            <li>Digital Twins in Egypt's irrigation systems</li>
-          </ul>
-          <div class="speaker-audience">🎯 Civil Engineering</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">04:15 PM</div>
-          <div class="speaker-name">Ayman</div>
-          <div class="speaker-role">Head of HR · CIPD Level 7 · Career Coach</div>
-          <div class="speaker-org">HNI · HR Capsules · 14+ yrs, 7 countries · MBA ESLSCA France</div>
-          <div class="speaker-panel">"Mastering Your Career Path"</div>
-          <ul class="speaker-topics">
-            <li>CV & portfolio tips: avoiding common mistakes</li>
-            <li>Mastering the Engineering Mindset: risk management & problem-solving</li>
-            <li>Interview preparation: technical expertise + soft skills</li>
-          </ul>
-          <div class="speaker-audience">🎯 All Engineering Majors</div>
-        </div>
-
-        <div class="speaker-card reveal">
-          <div class="speaker-time">04:15 PM</div>
-          <div class="speaker-name">Evette</div>
-          <div class="speaker-role">Talent Acquisition Lead</div>
-          <div class="speaker-org">DAR · Top 200 Content Creators in Egypt (FAVIKON) · 200+ engineers hired in a single
-            year</div>
-          <div class="speaker-panel">"Mastering Your Career Path"</div>
-          <ul class="speaker-topics">
-            <li>CV tips: common mistakes & GPA vs. skills</li>
-            <li>Choosing the right internship</li>
-            <li>Interview secrets & employer expectations</li>
-          </ul>
-          <div class="speaker-audience">🎯 All Engineering Majors</div>
-        </div>
-
-        <div class="speaker-card reveal">
+        <div class="speaker-card reveal" data-field="Architecture">
           <div class="speaker-time">05:30 PM</div>
           <div class="speaker-name">Dr. Noeman</div>
           <div class="speaker-role">Founder · Assistant Professor</div>
@@ -2631,7 +2882,21 @@
           <div class="speaker-audience">🎯 Architecture Department</div>
         </div>
 
-        <div class="speaker-card reveal">
+        <div class="speaker-card reveal" data-field="Architecture">
+          <div class="speaker-time">05:30 PM</div>
+          <div class="speaker-name">Dr. Tarek Ibrahim</div>
+          <div class="speaker-role">Professor of Architecture & Building Technology / Vice Dean</div>
+          <div class="speaker-org">Faculty of Engineering, Cairo University</div>
+          <div class="speaker-panel">"Architecture: Space, Experience & Innovation"</div>
+          <ul class="speaker-topics">
+            <li>Architecture & Building Technology</li>
+            <li>Innovation in architectural design</li>
+            <li>Academic perspectives on modern architecture</li>
+          </ul>
+          <div class="speaker-audience">🎯 Architecture Department</div>
+        </div>
+
+        <div class="speaker-card reveal" data-field="HR">
           <div class="speaker-time">06:30 PM</div>
           <div class="speaker-name">Haidy</div>
           <div class="speaker-role">Manager, Campus Recruitment · HR Training Consultant</div>
@@ -2651,7 +2916,7 @@
   </section>
 
   <!-- MENTORS -->
-  <section id="mentors">
+  <!-- <section id="mentors">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-num">04</div>
@@ -2851,13 +3116,13 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- BY MAJOR -->
   <section id="by-major">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-num">05</div>
+        <div class="section-num">04</div>
         <div class="section-title-group">
           <h2 class="section-title">Find Your Opportunities</h2>
           <div class="section-title-line"></div>
@@ -2909,8 +3174,7 @@
               class="major-company-tag">DAR Al-Handasah</span><span class="major-company-tag">EDECS</span><span
               class="major-company-tag">Miro</span><span class="major-company-tag">Pinnacle Group</span><span
               class="major-company-tag">SODIC</span><span class="major-company-tag">AlKarma Real Estate</span><span
-              class="major-company-tag">NUCA (Company Talk)</span><span class="major-company-tag">Dr. Noeman
-              Panel</span><span class="major-company-tag">RESK Academy</span>
+              class="major-company-tag">NUCA (Company Talk)</span><span class="major-company-tag">RESK Academy</span>
           </div>
         </div>
 
@@ -3111,6 +3375,23 @@
   </footer>
 
   <script>
+    // ── SPEAKER FILTER ──
+    function filterSpeakers(field) {
+      const cards = document.querySelectorAll('.speaker-card');
+      const buttons = document.querySelectorAll('.speaker-filter-btn');
+      
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      cards.forEach(card => {
+        if (field === 'all' || card.dataset.field === field) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
     // ── NAV SCROLL ──
     const nav = document.getElementById('mainNav');
     const btt = document.getElementById('btt');
